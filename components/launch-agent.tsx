@@ -70,7 +70,8 @@ export function LaunchAgent() {
         >
           Need help? Read the{" "}
           <Link
-            href="#"
+            href="https://docs.stratifi.xyz/docs/stratifi-ai-agent/stratifi-ai-details/"
+            target="_blank"
             className="text-white underline underline-offset-2 hover:text-[#AD90FE]"
           >
             Docs
@@ -91,10 +92,18 @@ export function LaunchAgent() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <Button
+            asChild
             size="lg"
-            className="rounded-full bg-[#AD90FE] text-black hover:bg-[#AD90FE]/90 hover:scale-105 transition-all text-base font-medium py-6 px-8"
+            className="rounded-full bg-[#AD90FE] text-black hover:bg-[#AD90FE]/90 hover:scale-105 transition-all text-base font-medium py-6 px-8 cursor-pointer"
           >
-            Launch Agent
+            <Link
+              href="https://docs.stratifi.xyz/docs/stratifi-ai-agent/stratifi-ai-details/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer"
+            >
+              Launch Agent
+            </Link>
           </Button>
         </motion.div>
       </div>

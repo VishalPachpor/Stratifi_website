@@ -103,38 +103,24 @@ export default function HeroSection() {
             viewport={{ once: true, margin: "-100px" }}
             className="flex flex-col items-center justify-center gap-6 sm:flex-row pt-8"
           >
-            <Button
-              asChild
-              size="lg"
-              variant="default"
-              className="bg-gradient-to-r from-[#9b87f5] to-[#7c3aed] hover:opacity-90"
-            >
-              <Link href="/docs/get-started">Launch Agent</Link>
-            </Button>
-            <Button
-              asChild
-              variant="ghost"
-              size="lg"
-              className="text-white/70 hover:text-white gap-2"
-            >
-              <a href="#how-it-works">
-                Learn how it works
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="transition-transform duration-300 group-hover:translate-y-1"
-                >
-                  <path d="m6 9 6 6 6-6"></path>
-                </svg>
-              </a>
-            </Button>
+            <Link href="/docs" className="inline-block w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto bg-gradient-to-r from-[#9b87f5] to-[#7c3aed] hover:opacity-90 cursor-pointer"
+              >
+                Launch Agent
+              </Button>
+            </Link>
+
+            <Link href="/whitelist" className="inline-block w-full sm:w-auto">
+              <Button
+                variant="ghost"
+                size="lg"
+                className="w-full sm:w-auto text-white/70 hover:text-white hover:bg-white/10 gap-2 cursor-pointer"
+              >
+                Join the waitlist
+              </Button>
+            </Link>
           </motion.div>
 
           {/* Stats Section */}

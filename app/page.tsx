@@ -9,6 +9,7 @@ import GettingStarted from "@/components/getting-started";
 import APRComparison from "@/components/apr-comparison";
 import { LaunchAgent } from "@/components/launch-agent";
 import { Footer } from "@/components/footer";
+import Link from "next/link";
 
 export default function StratiFiLanding() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -59,20 +60,37 @@ export default function StratiFiLanding() {
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6">
         <div className="flex items-center space-x-2">
           <div className="w-12 h-12 rounded-sm">
-            <img src="/logo.png" alt="StratiFi Logo" className="w-full h-full" />
+            <img
+              src="/logo.png"
+              alt="StratiFi Logo"
+              className="w-full h-full"
+            />
           </div>
           <span className="text-3xl font-medium">StratiFi</span>
         </div>
 
         <div className="flex items-center space-x-8">
-          <Button variant="ghost" className="text-gray-300 hover:text-white">
-            About
-          </Button>
-          <Button
-            variant="default"
-            className="bg-gradient-to-r from-[#9b87f5] to-[#7c3aed] hover:opacity-90"
+          <Link
+            href="https://docs.stratifi.xyz/docs/stratifi-ai-agent/stratifi-ai-details/"
+            target="_blank"
           >
-            Launch Agent
+            <Button variant="ghost" className="text-gray-300 hover:text-white">
+              About
+            </Button>
+          </Link>
+          <Button
+            asChild
+            variant="default"
+            className="bg-gradient-to-r from-[#9b87f5] to-[#7c3aed] hover:opacity-90 cursor-pointer"
+          >
+            <Link
+              href="https://docs.stratifi.xyz/docs/stratifi-ai-agent/stratifi-ai-details/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer"
+            >
+              Launch Agent
+            </Link>
           </Button>
         </div>
       </nav>

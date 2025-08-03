@@ -71,7 +71,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="#"
+                  href="https://docs.stratifi.xyz/docs/stratifi-ai-agent/stratifi-ai-details/"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   About

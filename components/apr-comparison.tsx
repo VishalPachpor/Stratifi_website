@@ -138,7 +138,7 @@ const APRComparison = () => {
               <p className="text-4xl font-bold">$10,000.00</p>
             </div>
             <div>
-              <p className="text-white/60 text-lg mb-2">Earned with ARMA</p>
+              <p className="text-white/60 text-lg mb-2">Earned with StratiFi</p>
               <div className="flex items-center gap-3">
                 <p className="text-4xl font-bold bg-gradient-to-r from-[#9b87f5] to-[#7c3aed] bg-clip-text text-transparent">
                   +$1031.86
