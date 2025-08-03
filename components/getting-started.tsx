@@ -23,7 +23,7 @@ const GettingStarted = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-light">
               Getting started
             </h2>
           </motion.div>
@@ -91,7 +91,7 @@ const AnimatedStepCard = ({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-      className={`group relative flex flex-col items-center gap-4 p-6 border rounded-2xl backdrop-blur-xl transition-all duration-500 ${
+      className={`group relative flex flex-col items-center gap-4 p-4 border rounded-2xl backdrop-blur-xl transition-all duration-500 ${
         isActive
           ? "border-white/30 bg-gradient-to-br from-background/40 to-primary/20 shadow-[0_0_20px_rgba(155,135,245,0.2)]"
           : "border-white/10 bg-gradient-to-br from-background/20 to-primary/10"
@@ -136,9 +136,9 @@ const AnimatedStepCard = ({
         }`}
       />
 
-      <div className="flex-shrink-0">
+      <div className="flex items-center gap-3 mb-2">
         <motion.div
-          className={`w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-500 ${
+          className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-500 ${
             isActive
               ? "bg-gradient-to-br from-primary/90 to-primary shadow-[0_0_15px_rgba(155,135,245,0.6)]"
               : "bg-gradient-to-br from-primary/80 to-primary"
@@ -149,21 +149,21 @@ const AnimatedStepCard = ({
           transition={{ duration: 0.3 }}
         >
           <step.icon
-            className={`w-6 h-6 transition-all duration-500 ${
+            className={`w-5 h-5 transition-all duration-500 ${
               isActive ? "text-white" : "text-primary-foreground"
             }`}
           />
         </motion.div>
-      </div>
-
-      <div className="text-center">
         <h3
-          className={`text-lg font-semibold mb-2 transition-all duration-500 ${
+          className={`text-lg font-semibold transition-all duration-500 ${
             isActive ? "text-white" : "text-white/80"
           }`}
         >
           {step.title}
         </h3>
+      </div>
+
+      <div className="text-center">
         <p
           className={`text-sm transition-all duration-500 ${
             isActive ? "text-white/80" : "text-white/60"

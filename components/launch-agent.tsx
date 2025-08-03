@@ -55,7 +55,7 @@ export function LaunchAgent() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center mb-8 max-w-3xl leading-tight"
+          className="text-5xl md:text-6xl lg:text-7xl font-light text-white text-center mb-8 max-w-3xl leading-tight"
         >
           Start earning
           <br /> in 60 seconds

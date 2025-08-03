@@ -8,7 +8,7 @@ export function Features() {
   return (
     <section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
       {/* add heading  */}
-      <h2 className="text-7xl pb-24 font-bold text-center">Features</h2>
+      <h2 className="text-7xl pb-24 font-light text-center">Features</h2>
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         <div className="mx-auto grid gap-8 lg:grid-cols-2">
           <FeatureCard>
@@ -173,67 +173,32 @@ const ProtocolsGrid = () => {
     {
       name: "MORPHO",
       percentage: "55.69%",
-      logo: (
-        <svg
-          viewBox="0 0 24 24"
-          className="w-8 h-8 text-white"
-          fill="currentColor"
-        >
-          <path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 18.5L5 16V8l7 4.5V20.5zm1-9L6 7l6-3.5L18 7l-5 4.5zm6 6.5l-6 3.5V13l6-3.5v7.5z" />
-        </svg>
-      ),
+      logoSrc: "/Morpho.svg",
     },
     {
       name: "BEEFY",
       percentage: "31.19%",
-      logo: (
-        <svg
-          viewBox="0 0 24 24"
-          className="w-8 h-8 text-white"
-          fill="currentColor"
-        >
-          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
-        </svg>
-      ),
+      logoSrc: "/beefy.svg",
     },
     {
       name: "PENDLE",
       percentage: "9.95%",
-      logo: (
-        <svg
-          viewBox="0 0 24 24"
-          className="w-8 h-8 text-white"
-          fill="currentColor"
-        >
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-        </svg>
-      ),
+      logoSrc: "/pendle.svg",
     },
     {
       name: "EULER",
       percentage: "7.61%",
-      logo: (
-        <svg
-          viewBox="0 0 24 24"
-          className="w-8 h-8 text-white"
-          fill="currentColor"
-        >
-          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-        </svg>
-      ),
+      logoSrc: "/euler.svg",
     },
     {
       name: "AAVE",
       percentage: "6.32%",
-      logo: (
-        <svg
-          viewBox="0 0 24 24"
-          className="w-8 h-8 text-white"
-          fill="currentColor"
-        >
-          <path d="M16 6h-6v8.59L5.71 9.3l-2.12 2.12L12 19.83l8.41-8.41-2.12-2.12L14 14.59V6z" />
-        </svg>
-      ),
+      logoSrc: "/aave.svg",
+    },
+    {
+      name: "COMPOUND",
+      percentage: "6.32%",
+      logoSrc: "/compound.svg",
     },
   ];
 
@@ -260,7 +225,15 @@ const ProtocolsGrid = () => {
             key={index}
             className="relative bg-[#0e0a1a] p-4 rounded-lg flex flex-col items-center justify-center"
           >
-            <div className="mb-2">{protocol.logo}</div>
+            <div className="mb-2">
+              <Image
+                src={protocol.logoSrc}
+                alt={`${protocol.name} logo`}
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
+            </div>
             <div className="text-white font-medium text-sm ">
               {protocol.name}
             </div>

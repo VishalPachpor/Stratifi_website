@@ -27,9 +27,7 @@ const APRComparison = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true, margin: "-100px" }}
             className="text-sm text-white/60 uppercase tracking-wider"
-          >
-
-          </motion.div>
+          ></motion.div>
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -49,7 +47,7 @@ const APRComparison = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 w-full"
+            className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 w-full"
           >
             <span className="bg-gradient-to-r from-[#9b87f5] to-[#7c3aed] bg-clip-text text-transparent">
               83.45%

@@ -56,7 +56,7 @@ export default function HeroSection() {
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-light text-white mb-2">
                 <CountingAnimation
-                  value={15.0}
+                  value={12.0}
                   suffix="%"
                   duration={2.5}
                   className="text-2xl md:text-3xl font-light text-white"
@@ -69,7 +69,7 @@ export default function HeroSection() {
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-light text-white mb-2">
                 <CountingAnimation
-                  value={200}
+                  value={30}
                   prefix="$"
                   suffix="k+"
                   duration={2.5}
@@ -96,7 +96,7 @@ export default function HeroSection() {
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-light text-white mb-2">
                 <CountingAnimation
-                  value={273}
+                  value={5}
                   prefix="+"
                   suffix="K"
                   duration={2.5}

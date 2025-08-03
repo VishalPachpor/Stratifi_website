@@ -57,7 +57,7 @@ export function HowItWorks() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-16"
+            className="text-5xl md:text-6xl lg:text-7xl font-light text-center mb-16"
           >
             How StratiFi works
           </motion.h2>
