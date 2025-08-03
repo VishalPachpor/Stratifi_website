@@ -247,7 +247,7 @@ export default function Globe3D({ className = "" }: Globe3DProps) {
       <div
         className={`w-full h-full ${className} flex items-center justify-center`}
         style={{
-          minHeight: "600px",
+          minHeight: "300px",
           position: "relative",
           overflow: "hidden",
         }}
@@ -271,9 +271,11 @@ export default function Globe3D({ className = "" }: Globe3DProps) {
       ref={mountRef}
       className={`three-js-container w-full h-full ${className}`}
       style={{
-        minHeight: "600px",
+        minHeight: "300px",
         position: "relative",
         overflow: "hidden",
+        width: "100%",
+        height: "100%",
       }}
     />
   );

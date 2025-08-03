@@ -6,11 +6,16 @@ import { motion } from "framer-motion";
 import Globe3D from "./globe-3d";
 import { Button } from "@/components/ui/button";
 import CountingAnimation from "./counting-animation";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function HeroSection() {
+  const isMobile = useIsMobile();
+
   return (
     <section
-      className="hero-section relative w-full overflow-hidden bg-[#0a0613] font-light text-white antialiased min-h-screen flex flex-col justify-start items-center pt-20 isolate"
+      className={`hero-section relative w-full overflow-hidden bg-[#0a0613] font-light text-white antialiased min-h-screen flex flex-col justify-start items-center pt-20 isolate ${
+        isMobile ? "pb-20" : "pb-0"
+      }`}
       style={{
         background: "linear-gradient(135deg, #0a0613 0%, #150d27 100%)",
       }}
@@ -40,7 +45,11 @@ export default function HeroSection() {
       />
 
       {/* Main Content - Upper Section */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center md:px-6 lg:px-8 mt-20">
+      <div
+        className={`relative z-10 max-w-6xl mx-auto px-4 text-center md:px-6 lg:px-8 ${
+          isMobile ? "mt-12" : "mt-20"
+        }`}
+      >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +74,7 @@ export default function HeroSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="mx-auto max-w-5xl text-5xl leading-tight md:text-6xl lg:text-8xl xl:text-9xl"
+            className="mx-auto max-w-5xl text-4xl leading-tight sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl"
           >
             Agents for{" "}
             <span className="bg-gradient-to-r from-[#9b87f5] to-[#7c3aed] bg-clip-text text-transparent font-semibold">
@@ -80,7 +89,7 @@ export default function HeroSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="mx-auto max-w-3xl text-xl text-white/90 md:text-xl lg:text-2xl font-light leading-relaxed"
+            className="mx-auto max-w-3xl text-lg text-white/90 sm:text-xl md:text-xl lg:text-2xl font-light leading-relaxed"
           >
             Stratifi delivers personalized, risk-adjusted yield on your crypto
             assets. Its as simple as using ChatGPT to maximize your returns.
@@ -137,12 +146,12 @@ export default function HeroSection() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-8 border-t border-white/10"
           >
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">
-                <CountingAnimation 
-                  value={15.00} 
-                  suffix="%" 
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2">
+                <CountingAnimation
+                  value={15.0}
+                  suffix="%"
                   duration={2.5}
-                  className="text-2xl md:text-3xl font-bold text-white"
+                  className="text-xl sm:text-2xl md:text-3xl font-bold text-white"
                 />
               </div>
               <div className="text-xs md:text-sm text-white/60 uppercase tracking-wider">
@@ -150,13 +159,13 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">
-                <CountingAnimation 
-                  value={762} 
-                  prefix="$" 
-                  suffix="M+" 
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2">
+                <CountingAnimation
+                  value={762}
+                  prefix="$"
+                  suffix="M+"
                   duration={2.5}
-                  className="text-2xl md:text-3xl font-bold text-white"
+                  className="text-xl sm:text-2xl md:text-3xl font-bold text-white"
                 />
               </div>
               <div className="text-xs md:text-sm text-white/60 uppercase tracking-wider">
@@ -164,12 +173,12 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">
-                <CountingAnimation 
-                  value={30000} 
-                  prefix="+" 
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2">
+                <CountingAnimation
+                  value={30000}
+                  prefix="+"
                   duration={2.5}
-                  className="text-2xl md:text-3xl font-bold text-white"
+                  className="text-xl sm:text-2xl md:text-3xl font-bold text-white"
                 />
               </div>
               <div className="text-xs md:text-sm text-white/60 uppercase tracking-wider">
@@ -177,13 +186,13 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">
-                <CountingAnimation 
-                  value={273} 
-                  prefix="+" 
-                  suffix="K" 
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2">
+                <CountingAnimation
+                  value={273}
+                  prefix="+"
+                  suffix="K"
                   duration={2.5}
-                  className="text-2xl md:text-3xl font-bold text-white"
+                  className="text-xl sm:text-2xl md:text-3xl font-bold text-white"
                 />
               </div>
               <div className="text-xs md:text-sm text-white/60 uppercase tracking-wider">
@@ -200,12 +209,17 @@ export default function HeroSection() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5, delay: 0.5 }}
         viewport={{ once: true, margin: "-200px" }}
-        className="absolute top-[5%] right-[28%] transform translate-x-[10%] -translate-y-[10%] z-0 pointer-events-none"
+        className={`absolute z-0 pointer-events-none ${
+          isMobile
+            ? "top-[10%] left-[10%] transform -translate-x-1/2 -translate-y-1/2"
+            : "top-[5%] right-[28%] transform translate-x-[10%] -translate-y-[10%]"
+        }`}
         style={{
-          width: "min(50vw, 700px)",
-          height: "min(50vh, 700px)",
-          maxWidth: "700px",
-          maxHeight: "700px",
+          width: isMobile ? "min(80vw, 400px)" : "min(50vw, 700px)",
+          height: isMobile ? "min(40vh, 400px)" : "min(50vh, 700px)",
+          maxWidth: isMobile ? "400px" : "700px",
+          maxHeight: isMobile ? "400px" : "700px",
+          opacity: isMobile ? 0.3 : 1,
         }}
       >
         <Globe3D className="w-full h-full" />
