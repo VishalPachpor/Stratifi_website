@@ -52,23 +52,11 @@ export function Features() {
             </p>
 
             <div className="flex justify-center gap-6 overflow-hidden">
-              <BlockchainLogo
-                label="Ethereum"
-                logoSrc="/ethereum.svg"
-              />
-              <BlockchainLogo
-                label="Katana"
-                logoSrc="/katana.jpg"
-              />
-              <BlockchainLogo
-                label="Base"
-                logoSrc="/base.svg"
-              /> 
-              
-              <BlockchainLogo
-                label="Starknet"
-                logoSrc="/starknet.png"
-              />
+              <BlockchainLogo label="Ethereum" logoSrc="/ethereum.svg" />
+              <BlockchainLogo label="Katana" logoSrc="/katana.jpg" />
+              <BlockchainLogo label="Base" logoSrc="/Base.svg" />
+
+              <BlockchainLogo label="Starknet" logoSrc="/starknet.png" />
             </div>
           </FeatureCard>
         </div>
@@ -196,7 +184,7 @@ const ProtocolsGrid = () => {
       ),
     },
     {
-      name: "SEAMLESS",
+      name: "BEEFY",
       percentage: "31.19%",
       logo: (
         <svg
@@ -209,7 +197,7 @@ const ProtocolsGrid = () => {
       ),
     },
     {
-      name: "MOONWELL",
+      name: "PENDLE",
       percentage: "9.95%",
       logo: (
         <svg
@@ -235,7 +223,7 @@ const ProtocolsGrid = () => {
       ),
     },
     {
-      name: "COMPOUND",
+      name: "AAVE",
       percentage: "6.32%",
       logo: (
         <svg
@@ -244,32 +232,6 @@ const ProtocolsGrid = () => {
           fill="currentColor"
         >
           <path d="M16 6h-6v8.59L5.71 9.3l-2.12 2.12L12 19.83l8.41-8.41-2.12-2.12L14 14.59V6z" />
-        </svg>
-      ),
-    },
-    {
-      name: "FLUID",
-      percentage: "5.83%",
-      logo: (
-        <svg
-          viewBox="0 0 24 24"
-          className="w-8 h-8 text-white"
-          fill="currentColor"
-        >
-          <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
-        </svg>
-      ),
-    },
-    {
-      name: "AAVE",
-      percentage: "5.43%",
-      logo: (
-        <svg
-          viewBox="0 0 24 24"
-          className="w-8 h-8 text-white"
-          fill="currentColor"
-        >
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
         </svg>
       ),
     },

@@ -116,7 +116,7 @@ export default function HeroSection() {
               type="button"
               onClick={() => {
                 console.log("Launch Agent clicked!");
-                window.open("https://app.stratifi.ai", "_blank");
+                window.open("https://demo.stratifi.xyz/agent/chat", "_blank");
               }}
               className="w-full sm:w-auto bg-[#AD90FE] text-black font-light text-lg px-8 py-4 rounded-full hover:bg-[#9580E8] hover:scale-105 transition-all duration-200 cursor-pointer shadow-lg"
             >
