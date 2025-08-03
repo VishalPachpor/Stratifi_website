@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Github, Twitter, MessagesSquare, ArrowUpRight, Linkedin, Send } from "lucide-react";
+import { ArrowUpRight, Send, X } from "lucide-react";
 
 export function Footer() {
   return (
@@ -52,7 +52,7 @@ export function Footer() {
             <div className="flex items-center gap-4">
               <Link href="https://x.com/stratifixyz" className="group">
                 <div className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors duration-300">
-                  <Twitter className="w-5 h-5 group-hover:text-[#AD90FE] transition-colors duration-300" />
+                  <X className="w-5 h-5 group-hover:text-[#AD90FE] transition-colors duration-300" />
                 </div>
               </Link>
               <Link href="https://t.me/stratifixyz" className="group">
@@ -77,22 +77,6 @@ export function Footer() {
                   About
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  Blog
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -110,24 +94,12 @@ export function Footer() {
                   Documentation
                 </Link>
               </li>
+
               <li>
                 <Link
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  href="https://x.com/stratifixyz"
+                  className="group flex items-center gap-1"
                 >
-                  Help Center
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  API Reference
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="group flex items-center gap-1">
                   <span className="text-gray-400 group-hover:text-white transition-colors duration-300">
                     Community
                   </span>
@@ -157,22 +129,6 @@ export function Footer() {
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  Cookie Settings
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  Compliance
                 </Link>
               </li>
             </ul>

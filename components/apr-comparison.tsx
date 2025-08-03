@@ -6,10 +6,9 @@ import { useState, useEffect, useRef } from "react";
 const protocolData = [
   { name: "AAVE V3", apr: 3.57, earnings: 357.0, color: "#7c3aed" },
   { name: "COMPOUND V3", apr: 3.01, earnings: 301.0, color: "#8b5cf6" },
-  { name: "BEEFY", apr: 7.67, earnings: 767.0, color: "#a855f7" },
+  { name: "MOONWELL", apr: 7.67, earnings: 767.0, color: "#a855f7" },
   { name: "MORPHO", apr: 7.67, earnings: 767.0, color: "#9333ea" },
-  { name: "EULER", apr: 7.48, earnings: 748.0, color: "#7e22ce" },
-  { name: "PENDLE", apr: 9.13, earnings: 913.0, color: "#6b21a8" },
+  { name: "SEAMLESS", apr: 7.48, earnings: 748.0, color: "#7e22ce" },
 ];
 
 const APRComparison = () => {

@@ -154,19 +154,14 @@ const ProtocolsGrid = () => {
       logoSrc: "/Morpho.svg",
     },
     {
-      name: "BEEFY",
+      name: "MOONWELL",
       percentage: "31.19%",
-      logoSrc: "/beefy.svg",
+      logoSrc: "/moonwell.png",
     },
     {
-      name: "PENDLE",
-      percentage: "9.95%",
-      logoSrc: "/pendle.svg",
-    },
-    {
-      name: "EULER",
+      name: "SEAMLESS",
       percentage: "7.61%",
-      logoSrc: "/euler.svg",
+      logoSrc: "/seamless.avif",
     },
     {
       name: "AAVE",
