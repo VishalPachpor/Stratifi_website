@@ -19,11 +19,15 @@ export default function HeroSection() {
         </div>
 
         {/* 3D Globe Background */}
-        {!isMobile && (
-          <div className="absolute top-[15%] right-[25%] w-[600px] h-[600px] opacity-80 pointer-events-none">
-            <Globe3D className="w-full h-full" />
-          </div>
-        )}
+        <div
+          className={`absolute pointer-events-none ${
+            isMobile
+              ? "top-[10%] right-[30%] w-[200px] h-[200px] opacity-60"
+              : "top-[10%] right-[30%] w-[600px] h-[600px] opacity-80"
+          }`}
+        >
+          <Globe3D className="w-full h-full" />
+        </div>
 
         {/* Main Content */}
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 pt-20 pb-20">

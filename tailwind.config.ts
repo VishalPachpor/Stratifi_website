@@ -13,7 +13,7 @@ const config: Config = {
   theme: {
   	extend: {
   		fontFamily: {
-  			'sequel': ['"Sequel Sans Display Book"', '"Sequel Sans Display Book Placeholder"', 'sans-serif'],
+  			'sequel': ['"Sequel Sans Display Book"', '"Sequel Sans Display Book Placeholder"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
   		},
   		colors: {
   			background: 'hsl(var(--background))',

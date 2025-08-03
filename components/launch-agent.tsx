@@ -78,7 +78,7 @@ export function LaunchAgent() {
           </Link>{" "}
           or join our{" "}
           <Link
-            href="#"
+            href="https://discord.gg/e77VZyrh"
             className="text-white underline underline-offset-2 hover:text-[#AD90FE]"
           >
             Discord
