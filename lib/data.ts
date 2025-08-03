@@ -15,6 +15,6 @@ export const gettingStartedSteps = [
     {
         icon: Play,
         title: "Trade with your agent",
-        description: "Stratifi takes it from there"
+        description: "Agent takes it from there"
     }
 ];

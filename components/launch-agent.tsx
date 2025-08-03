@@ -97,7 +97,7 @@ export function LaunchAgent() {
             className="rounded-full bg-[#AD90FE] text-black hover:bg-[#AD90FE]/90 hover:scale-105 transition-all text-base font-medium py-6 px-8 cursor-pointer"
           >
             <Link
-              href="https://docs.stratifi.xyz/docs/stratifi-ai-agent/stratifi-ai-details/"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer"

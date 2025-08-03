@@ -57,12 +57,17 @@ export function Features() {
                 logoSrc="/ethereum.svg"
               />
               <BlockchainLogo
-                label="Polygon"
-                logoSrc="/polygon.svg"
+                label="Katana"
+                logoSrc="/katana.jpg"
               />
               <BlockchainLogo
                 label="Base"
                 logoSrc="/base.svg"
+              /> 
+              
+              <BlockchainLogo
+                label="Starknet"
+                logoSrc="/starknet.png"
               />
             </div>
           </FeatureCard>
@@ -179,7 +184,7 @@ const ProtocolsGrid = () => {
   const protocols = [
     {
       name: "MORPHO",
-      percentage: "55,69%",
+      percentage: "55.69%",
       logo: (
         <svg
           viewBox="0 0 24 24"
@@ -192,7 +197,7 @@ const ProtocolsGrid = () => {
     },
     {
       name: "SEAMLESS",
-      percentage: "31,19%",
+      percentage: "31.19%",
       logo: (
         <svg
           viewBox="0 0 24 24"
@@ -205,7 +210,7 @@ const ProtocolsGrid = () => {
     },
     {
       name: "MOONWELL",
-      percentage: "9,95%",
+      percentage: "9.95%",
       logo: (
         <svg
           viewBox="0 0 24 24"
@@ -218,7 +223,7 @@ const ProtocolsGrid = () => {
     },
     {
       name: "EULER",
-      percentage: "7,61%",
+      percentage: "7.61%",
       logo: (
         <svg
           viewBox="0 0 24 24"
@@ -231,7 +236,7 @@ const ProtocolsGrid = () => {
     },
     {
       name: "COMPOUND",
-      percentage: "6,32%",
+      percentage: "6.32%",
       logo: (
         <svg
           viewBox="0 0 24 24"
@@ -244,7 +249,7 @@ const ProtocolsGrid = () => {
     },
     {
       name: "FLUID",
-      percentage: "5,83%",
+      percentage: "5.83%",
       logo: (
         <svg
           viewBox="0 0 24 24"
@@ -257,7 +262,7 @@ const ProtocolsGrid = () => {
     },
     {
       name: "AAVE",
-      percentage: "5,43%",
+      percentage: "5.43%",
       logo: (
         <svg
           viewBox="0 0 24 24"

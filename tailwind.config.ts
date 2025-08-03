@@ -12,6 +12,9 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			'sequel': ['"Sequel Sans Display Book"', '"Sequel Sans Display Book Placeholder"', 'sans-serif'],
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

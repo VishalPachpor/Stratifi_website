@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Sequel Sans Display Book Font */
+@font-face {
+  font-family: 'Sequel Sans Display Book';
+  src: url('/fonts/SequelSansDisplay-Book.woff2') format('woff2'),
+       url('/fonts/SequelSansDisplay-Book.woff') format('woff'),
+       url('/fonts/SequelSansDisplay-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sequel Sans Display Book';
+  src: url('/fonts/SequelSansDisplay-BookItalic.woff2') format('woff2'),
+       url('/fonts/SequelSansDisplay-BookItalic.woff') format('woff'),
+       url('/fonts/SequelSansDisplay-BookItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 0 0% 0%;
@@ -33,6 +54,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Sequel Sans Display Book", "Sequel Sans Display Book Placeholder", sans-serif;
     font-weight: 300;
   }
 }

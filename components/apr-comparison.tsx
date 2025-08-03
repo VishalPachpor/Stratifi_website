@@ -28,7 +28,7 @@ const APRComparison = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="text-sm text-white/60 uppercase tracking-wider"
           >
-            01. YEARLY APR
+
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 30 }}

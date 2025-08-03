@@ -84,7 +84,7 @@ export default function StratiFiLanding() {
             className="bg-gradient-to-r from-[#9b87f5] to-[#7c3aed] hover:opacity-90 cursor-pointer"
           >
             <Link
-              href="https://docs.stratifi.xyz/docs/stratifi-ai-agent/stratifi-ai-details/"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer"
