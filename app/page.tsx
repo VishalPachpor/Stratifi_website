@@ -59,7 +59,7 @@ export default function StratiFiLanding() {
       />
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6">
+      <nav className="fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-8 py-6">
         <div className="flex items-center space-x-2">
           <div className="w-12 h-12 rounded-sm">
             <img
@@ -111,7 +111,7 @@ export default function StratiFiLanding() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 md:hidden">
+        <div className="fixed inset-0 z-50 md:hidden">
           {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/80 backdrop-blur-sm"
