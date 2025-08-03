@@ -212,7 +212,7 @@ export default function HeroSection() {
         className={`absolute z-0 pointer-events-none ${
           isMobile
             ? "top-[10%] left-[10%] transform -translate-x-1/2 -translate-y-1/2"
-            : "top-[5%] right-[28%] transform translate-x-[10%] -translate-y-[10%]"
+            : "top-[15%] right-[18%] transform translate-x-[10%] -translate-y-[10%]"
         }`}
         style={{
           width: isMobile ? "min(80vw, 400px)" : "min(50vw, 700px)",
