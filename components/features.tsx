@@ -74,7 +74,7 @@ const ChatInterface = () => {
         {/* Left sidebar */}
         <div className="absolute left-0 top-0 bottom-0 w-16 bg-[#0e0a1a] border-r border-[#AD90FE]/20 flex flex-col items-center py-6">
           <div className="w-8 h-8 bg-[#AD90FE] rounded-md mb-6 flex items-center justify-center">
-            <span className="text-white text-sm font-bold">S</span>
+            <span className="text-white text-sm font-medium">S</span>
           </div>
           <div className="w-8 h-8 bg-[#1e1633] rounded-full mb-4 flex items-center justify-center">
             <div className="w-2 h-2 bg-[#AD90FE] rounded-full"></div>
@@ -88,30 +88,20 @@ const ChatInterface = () => {
         </div>
 
         {/* Main content area */}
-        <div className="ml-16 p-6 h-full">
+        <div className="ml-16 p-4 h-full flex flex-col">
           {/* Header */}
-          <div className="flex items-center mb-6">
-            <div className="mr-3 text-white font-medium">Stratifi</div>
-            <div className="px-3 py-0.5 bg-[#1e1633] rounded-full text-xs text-[#AD90FE] border border-[#AD90FE]/30">
+          <div className="flex items-center mb-4">
+            <div className="mr-3 text-white font-medium text-sm">Stratifi</div>
+            <div className="px-2 py-1 bg-[#1e1633] rounded-full text-xs text-[#AD90FE] border border-[#AD90FE]/30">
               AI-Powered Agent
             </div>
           </div>
 
           {/* Chat messages */}
-          <div className="space-y-6">
-            {/* Bot message */}
-            {/* <div className="flex gap-3">
-                            <div className="w-8 h-8 bg-[#AD90FE]/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                <span className="text-[#AD90FE]">AI</span>
-                            </div>
-                            <div className="bg-[#1e1633] p-3 rounded-lg text-white max-w-[80%]">
-                                Hello! How can I assist you with your loan needs today?
-                            </div>
-                        </div> */}
-
+          <div className="flex-1 space-y-4 mb-4">
             {/* User message */}
             <div className="flex gap-3 justify-end">
-              <div className="bg-[#AD90FE]/20 p-3 rounded-lg text-xs text-white max-w-[80%]">
+              <div className="bg-[#AD90FE]/20 p-3 rounded-lg text-sm text-white max-w-[80%]">
                 I need to check my portfolio performance.
               </div>
             </div>
@@ -119,14 +109,14 @@ const ChatInterface = () => {
             {/* Bot response with portfolio */}
             <div className="flex gap-3">
               <div className="w-8 h-8 bg-[#AD90FE]/20 rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-[#AD90FE]">AI</span>
+                <span className="text-[#AD90FE] text-sm font-medium">AI</span>
               </div>
-              <div className="space-y-3 max-w-[90%]">
-                <div className="bg-[#1e1633] p-3 rounded-lg text-white text-xs">
+              <div className="space-y-2 max-w-[90%]">
+                <div className="bg-[#1e1633] p-3 rounded-lg text-white text-sm">
                   Your portfolio is up 4.7% this week. Here are some metrics:
                 </div>
-                <div className="bg-[#1e1633] p-3 rounded-lg text-white text-xs">
-                  <ul className="list-disc pl-5 space-y-1 text-[8px]">
+                <div className="bg-[#1e1633] p-3 rounded-lg text-white text-sm">
+                  <ul className="list-disc pl-4 space-y-1 text-sm">
                     <li>Check yield opportunities</li>
                     <li>View transaction history</li>
                     <li>Analyze token performance</li>
@@ -137,30 +127,18 @@ const ChatInterface = () => {
           </div>
 
           {/* Input area */}
-          <div className="absolute bottom-0 left-0 right-0 p-4 ml-16">
+          <div className="mt-auto">
             <div className="relative">
               <input
                 type="text"
                 placeholder="Ask Stratifi anything about DeFi..."
-                className="w-full bg-[#1e1633] border border-[#AD90FE]/30 rounded-lg p-3 pl-4 pr-20 text-white focus:outline-none focus:border-[#AD90FE]/60"
+                className="w-full bg-[#1e1633] border border-[#AD90FE]/30 rounded-lg p-3 pl-4 pr-20 text-white text-sm focus:outline-none focus:border-[#AD90FE]/60"
               />
-              <button className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-[#AD90FE] text-black px-4 py-1 rounded-md text-sm">
+              <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#AD90FE] text-black px-3 py-1 rounded text-sm font-medium">
                 Send
               </button>
             </div>
-
-            {/* Bottom navigation */}
-            {/* <div className="flex justify-center mt-4 gap-6">
-                            <div className="text-[#AD90FE] text-sm">Portfolio</div>
-                            <div className="text-gray-400 text-sm">Yield</div>
-                            <div className="text-gray-400 text-sm">Transactions</div>
-                        </div> */}
           </div>
-
-          {/* <div className="absolute top-0 left-16 w-4 h-4 border-l-2 border-t-2 border-[#AD90FE]/50"></div> */}
-          {/* <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-[#AD90FE]/50"></div>
-                    <div className="absolute bottom-0 left-16 w-4 h-4 border-l-2 border-b-2 border-[#AD90FE]/50"></div>
-                    <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-[#AD90FE]/50"></div> */}
         </div>
       </div>
     </div>

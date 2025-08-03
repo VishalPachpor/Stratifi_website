@@ -141,7 +141,7 @@ const APRComparison = () => {
                 <p className="text-4xl font-bold bg-gradient-to-r from-[#9b87f5] to-[#7c3aed] bg-clip-text text-transparent">
                   +$1031.86
                 </p>
-                <span className="px-3 py-1 bg-gradient-to-r from-[#9b87f5]/20 to-[#7c3aed]/20 bg-gradient-to-r from-[#9b87f5] to-[#7c3aed] bg-clip-text text-transparent text-sm rounded-full border border-[#9b87f5]/30">
+                <span className="px-3 py-1 bg-gradient-to-r from-[#9b87f5] to-[#7c3aed] bg-clip-text text-transparent text-sm rounded-full border border-[#9b87f5]/30">
                   10.31% ●
                 </span>
               </div>
