@@ -50,7 +50,7 @@ const APRComparison = () => {
             className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 w-full"
           >
             <span className="bg-gradient-to-r from-[#9b87f5] to-[#7c3aed] bg-clip-text text-transparent">
-              83.45%
+              42.45%
             </span>{" "}
             higher APR
           </motion.h2>
