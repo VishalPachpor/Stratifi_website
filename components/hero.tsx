@@ -23,7 +23,7 @@ export default function HeroSection() {
           className={`absolute pointer-events-none ${
             isMobile
               ? "top-[15%] left-1/2 -translate-x-1/2 w-[180px] h-[180px] opacity-50"
-              : "top-[10%] left-[60%] -translate-x-1/2 w-[600px] h-[600px] opacity-80"
+              : "top-[10%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] opacity-80"
           }`}
         >
           <Globe3D className="w-full h-full" />

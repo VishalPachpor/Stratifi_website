@@ -51,11 +51,10 @@ export function Features() {
               Cross-chain DeFi optimization with real-time market intelligence.
             </p>
 
-            <div className="flex justify-center gap-6 overflow-hidden">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 overflow-hidden px-4">
               <BlockchainLogo label="Ethereum" logoSrc="/ethereum.svg" />
               <BlockchainLogo label="Katana" logoSrc="/katana.jpg" />
               <BlockchainLogo label="Base" logoSrc="/Base.svg" />
-
               <BlockchainLogo label="Starknet" logoSrc="/starknet.png" />
             </div>
           </FeatureCard>
@@ -310,17 +309,17 @@ interface BlockchainLogoProps {
 const BlockchainLogo = ({ label, logoSrc, className }: BlockchainLogoProps) => (
   <div className={className}>
     <div className="bg-gradient-to-b from-border size-fit rounded-2xl to-transparent p-px">
-      <div className="bg-gradient-to-b from-background to-muted/25 relative flex aspect-square w-fit items-center justify-center rounded-[15px] p-4">
+      <div className="bg-gradient-to-b from-background to-muted/25 relative flex aspect-square w-fit items-center justify-center rounded-[15px] p-3 sm:p-4">
         <Image
           src={logoSrc}
           alt={`${label} logo`}
           width={32}
           height={32}
-          className="w-8 h-8"
+          className="w-6 h-6 sm:w-8 sm:h-8"
         />
       </div>
     </div>
-    <span className="text-muted-foreground mt-1.5 block text-center text-sm">
+    <span className="text-muted-foreground mt-1.5 block text-center text-xs sm:text-sm">
       {label}
     </span>
   </div>
