@@ -52,65 +52,65 @@ export default function HeroSection() {
           </p>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 w-full max-w-4xl">
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-light text-white mb-2">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12 mb-16 w-full max-w-5xl px-4">
+            <div className="text-center min-h-[120px] sm:min-h-[100px] flex flex-col justify-center">
+              <div className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-3 sm:mb-2 leading-tight android-text-fix">
                 <CountingAnimation
                   value={12.0}
                   suffix="%"
                   duration={2.5}
-                  className="text-2xl md:text-3xl font-light text-white"
+                  className="text-xl sm:text-2xl md:text-3xl font-light text-white leading-tight android-number-display"
                 />
               </div>
-              <div className="text-sm text-white/60 uppercase tracking-wider">
+              <div className="text-xs sm:text-sm text-white/60 uppercase tracking-wider leading-relaxed px-1">
                 Current APR
               </div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-light text-white mb-2">
+            <div className="text-center min-h-[120px] sm:min-h-[100px] flex flex-col justify-center">
+              <div className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-3 sm:mb-2 leading-tight android-text-fix">
                 <CountingAnimation
                   value={30}
                   prefix="$"
                   suffix="k+"
                   duration={2.5}
-                  className="text-2xl md:text-3xl font-light text-white"
+                  className="text-xl sm:text-2xl md:text-3xl font-light text-white leading-tight android-number-display"
                 />
               </div>
-              <div className="text-sm text-white/60 uppercase tracking-wider">
+              <div className="text-xs sm:text-sm text-white/60 uppercase tracking-wider leading-relaxed px-1">
                 Capital Optimized
               </div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-light text-white mb-2">
+            <div className="text-center min-h-[120px] sm:min-h-[100px] flex flex-col justify-center">
+              <div className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-3 sm:mb-2 leading-tight android-text-fix">
                 <CountingAnimation
                   value={3}
                   prefix="+"
                   duration={2.5}
-                  className="text-2xl md:text-3xl font-light text-white"
+                  className="text-xl sm:text-2xl md:text-3xl font-light text-white leading-tight android-number-display"
                 />
               </div>
-              <div className="text-sm text-white/60 uppercase tracking-wider">
+              <div className="text-xs sm:text-sm text-white/60 uppercase tracking-wider leading-relaxed px-1">
                 Agents
               </div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-light text-white mb-2">
+            <div className="text-center min-h-[120px] sm:min-h-[100px] flex flex-col justify-center">
+              <div className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-3 sm:mb-2 leading-tight android-text-fix">
                 <CountingAnimation
                   value={5}
                   prefix="+"
                   suffix="K"
                   duration={2.5}
-                  className="text-2xl md:text-3xl font-light text-white"
+                  className="text-xl sm:text-2xl md:text-3xl font-light text-white leading-tight android-number-display"
                 />
               </div>
-              <div className="text-sm text-white/60 uppercase tracking-wider">
+              <div className="text-xs sm:text-sm text-white/60 uppercase tracking-wider leading-relaxed px-1">
                 Autonomous TXs
               </div>
             </div>
           </div>
 
           {/* CTA Buttons - Simple and Clean */}
-          <div className="flex flex-col sm:flex-row gap-6 items-center justify-center w-full max-w-md">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center w-full max-w-lg px-4">
             {/* Launch Agent Button */}
             <button
               type="button"
@@ -118,9 +118,9 @@ export default function HeroSection() {
                 console.log("Launch Agent clicked!");
                 window.open("https://demo.stratifi.xyz/agent/chat", "_blank");
               }}
-              className="w-full sm:w-auto bg-[#AD90FE] text-black font-light text-lg px-8 py-4 rounded-full hover:bg-[#9580E8] hover:scale-105 transition-all duration-200 cursor-pointer shadow-lg"
+              className="w-full sm:w-auto bg-[#AD90FE] text-black font-medium text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-[#9580E8] hover:scale-105 transition-all duration-200 cursor-pointer shadow-lg android-button-fix min-h-[48px]"
             >
-              Launch Agent
+              <span className="android-text-fix">Launch Agent</span>
             </button>
 
             {/* Join Whitelist Button */}
@@ -129,9 +129,9 @@ export default function HeroSection() {
               onClick={() =>
                 window.open("https://app.youform.com/forms/bbbn2d9r", "_blank")
               }
-              className="w-full sm:w-auto bg-transparent border-2 border-[#9b87f5] text-white font-light text-lg px-8 py-4 rounded-full hover:bg-[#9b87f5]/20 hover:scale-105 transition-all duration-200 cursor-pointer shadow-lg"
+              className="w-full sm:w-auto bg-transparent border-2 border-[#9b87f5] text-white font-medium text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-[#9b87f5]/20 hover:scale-105 transition-all duration-200 cursor-pointer shadow-lg android-button-fix min-h-[48px]"
             >
-              Join Whitelist
+              <span className="android-text-fix">Join Whitelist</span>
             </button>
           </div>
         </div>
