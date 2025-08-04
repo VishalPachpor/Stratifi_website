@@ -297,6 +297,19 @@ canvas {
     transform: translateZ(0);
     -webkit-overflow-scrolling: touch;
   }
+  
+  /* Footer input fixes for Android */
+  .android-input-fix {
+    font-size: 16px; /* Prevents zoom on iOS Safari */
+    -webkit-appearance: none;
+    border-radius: 8px;
+    min-height: 48px;
+  }
+  
+  .android-input-fix:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(173, 144, 254, 0.3);
+  }
 }
 
 /* Android-specific browser targeting */
@@ -313,5 +326,32 @@ canvas {
   /* Fallback for all mobile browsers */
   .android-navbar-fix {
     background: linear-gradient(180deg, #000000 0%, #000000 100%) !important;
+  }
+}
+
+/* Mobile 3D Globe positioning fixes */
+@media (max-width: 768px) {
+  /* Better mobile globe positioning */
+  .hero-section .absolute[class*="pointer-events-none"] {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) translateZ(0) !important;
+    top: 12% !important;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .hero-section .absolute[class*="pointer-events-none"] {
+    top: 8% !important;
+    transform: translateX(-50%) translateZ(0) scale(0.9) !important;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-section .absolute[class*="pointer-events-none"] {
+    top: 5% !important;
+    transform: translateX(-50%) translateZ(0) scale(0.8) !important;
   }
 }

@@ -29,8 +29,8 @@ export function Footer() {
       </div>
 
       {/* Footer content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10">
           {/* Brand and description */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
@@ -43,7 +43,7 @@ export function Footer() {
               </div>
               <span className="text-xl font-semibold">StratiFi</span>
             </div>
-            <p className="text-gray-400 mb-8 max-w-sm">
+            <p className="text-gray-400 mb-8 max-w-sm android-text-fix">
               The next-generation DeFi yield optimizer with AI-powered protocol
               integration for intelligent financial interactions.
             </p>
@@ -136,28 +136,30 @@ export function Footer() {
         </div>
 
         {/* Newsletter and copyright */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8">
           {/* Newsletter signup */}
-          <div className="max-w-md">
-            <h4 className="text-sm font-medium mb-3">
+          <div className="w-full lg:max-w-md">
+            <h4 className="text-sm font-medium mb-3 android-text-fix">
               Stay updated with our latest developments
             </h4>
             <div className="flex gap-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-white/5 rounded-lg px-4 py-2 border border-white/10 focus:outline-none focus:border-[#AD90FE] transition-colors flex-grow"
+                className="bg-white/5 rounded-lg px-4 py-3 sm:py-2 border border-white/10 focus:outline-none focus:border-[#AD90FE] transition-colors flex-1 min-w-0 android-input-fix"
               />
-              <button className="bg-[#AD90FE] hover:bg-[#AD90FE]/90 text-white px-4 py-2 rounded-lg transition-colors whitespace-nowrap">
-                Subscribe
+              <button className="bg-[#AD90FE] hover:bg-[#AD90FE]/90 text-white px-4 sm:px-6 py-3 sm:py-2 rounded-lg transition-colors whitespace-nowrap android-button-fix min-h-[48px] sm:min-h-auto flex-shrink-0">
+                <span className="android-text-fix">Subscribe</span>
               </button>
             </div>
           </div>
 
           {/* Copyright */}
-          <div className="text-gray-400 text-sm">
-            <p>© {new Date().getFullYear()} StratiFi. All rights reserved.</p>
-            <p className="mt-2 text-xs text-gray-500">
+          <div className="text-gray-400 text-sm w-full lg:w-auto">
+            <p className="android-text-fix">
+              © {new Date().getFullYear()} StratiFi. All rights reserved.
+            </p>
+            <p className="mt-2 text-xs text-gray-500 android-text-fix">
               Risks & disclosures: Yield is variable and not guaranteed. DeFi
               carries smart-contract and protocol risks.
             </p>

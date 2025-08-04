@@ -11,7 +11,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="relative w-full min-h-screen bg-gradient-to-br from-[#0a0613] to-[#150d27] text-white overflow-hidden pt-16 sm:pt-20 md:pt-24">
+      <section className="hero-section relative w-full min-h-screen bg-gradient-to-br from-[#0a0613] to-[#150d27] text-white overflow-hidden pt-16 sm:pt-20 md:pt-24">
         {/* Background Effects */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black/80"></div>
@@ -22,8 +22,8 @@ export default function HeroSection() {
         <div
           className={`absolute pointer-events-none ${
             isMobile
-              ? "top-[10%] right-[30%] w-[200px] h-[200px] opacity-60"
-              : "top-[10%] right-[30%] w-[600px] h-[600px] opacity-80"
+              ? "top-[15%] left-1/2 -translate-x-1/2 w-[180px] h-[180px] opacity-50"
+              : "top-[10%] left-[60%] -translate-x-1/2 w-[600px] h-[600px] opacity-80"
           }`}
         >
           <Globe3D className="w-full h-full" />
