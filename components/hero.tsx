@@ -11,7 +11,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="relative w-full min-h-screen bg-gradient-to-br from-[#0a0613] to-[#150d27] text-white overflow-hidden">
+      <section className="relative w-full min-h-screen bg-gradient-to-br from-[#0a0613] to-[#150d27] text-white overflow-hidden pt-16 sm:pt-20 md:pt-24">
         {/* Background Effects */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black/80"></div>
@@ -30,7 +30,7 @@ export default function HeroSection() {
         </div>
 
         {/* Main Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 pt-20 pb-20">
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-6rem)] px-4 py-8 sm:py-12 md:py-20">
           {/* Badge */}
           <div className="inline-block rounded-full border border-[#9b87f5]/30 px-6 py-3 text-sm font-medium text-[#9b87f5] tracking-wide mb-8">
             NEXT GENERATION OF DEFI

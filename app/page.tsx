@@ -59,16 +59,18 @@ export default function StratiFiLanding() {
       />
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-8 py-6">
+      <nav className="fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-4 sm:px-8 py-4 sm:py-6 bg-black/80 backdrop-blur-md border-b border-white/5 android-navbar-fix">
         <div className="flex items-center space-x-2">
-          <div className="w-12 h-12 rounded-sm">
+          <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-sm">
             <img
               src="/logo.png"
               alt="StratiFi Logo"
               className="w-full h-full"
             />
           </div>
-          <span className="text-3xl font-medium">StratiFi</span>
+          <span className="text-xl sm:text-2xl md:text-3xl font-medium android-text-fix">
+            StratiFi
+          </span>
         </div>
 
         {/* Desktop Navigation */}
@@ -99,13 +101,13 @@ export default function StratiFiLanding() {
 
         {/* Mobile Hamburger Menu Button */}
         <button
-          className={`md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors ${
+          className={`md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors android-button-fix ${
             isMobileMenuOpen ? "opacity-0 pointer-events-none" : ""
           }`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle mobile menu"
         >
-          <Menu className="w-6 h-6 text-white" />
+          <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
         </button>
       </nav>
 
@@ -119,7 +121,7 @@ export default function StratiFiLanding() {
           />
 
           {/* Menu Content */}
-          <div className="absolute top-0 right-0 h-full w-80 bg-[#0a0613] border-l border-[#AD90FE]/20 shadow-2xl">
+          <div className="absolute top-0 right-0 h-full w-72 sm:w-80 bg-[#0a0613] border-l border-[#AD90FE]/20 shadow-2xl android-mobile-menu">
             <div className="flex flex-col h-full">
               {/* Menu Header */}
               <div className="flex items-center justify-between p-6 border-b border-[#AD90FE]/20">

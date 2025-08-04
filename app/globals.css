@@ -222,6 +222,35 @@ canvas {
   white-space: nowrap;
 }
 
+/* Android navigation fixes */
+.android-navbar-fix {
+  position: fixed;
+  top: 0;
+  transform: translateZ(0);
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Android viewport handling */
+@supports (-webkit-touch-callout: none) {
+  .android-navbar-fix {
+    position: -webkit-sticky;
+    position: sticky;
+    top: env(safe-area-inset-top, 0);
+  }
+}
+
+/* Samsung Internet browser fixes */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .android-navbar-fix {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 /* Mobile layout improvements */
 @media (max-width: 640px) {
   .android-text-fix {
@@ -237,5 +266,29 @@ canvas {
   .android-button-fix {
     min-height: 48px;
     font-size: 16px; /* Prevents zoom on Safari iOS */
+  }
+  
+  /* Handle Android browser address bar */
+  .android-navbar-fix {
+    position: fixed;
+    top: 0;
+    height: 64px; /* Fixed height for consistency */
+  }
+  
+  /* Prevent content jumping on Android */
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+  }
+  
+  /* Mobile menu fixes for Android */
+  .android-mobile-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
+    transform: translateZ(0);
+    -webkit-overflow-scrolling: touch;
   }
 }
