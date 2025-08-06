@@ -59,13 +59,13 @@ export default function StratiFiLanding() {
       />
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-4 sm:px-8 py-4 sm:py-6 bg-black md:bg-black/80 md:backdrop-blur-md border-b border-white/10 android-navbar-fix">
-        <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-sm">
+      <nav className="fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-4 sm:px-8 py-4 sm:py-6 bg-gradient-to-r from-[#0a0613]/95 to-[#150d27]/95 backdrop-blur-md border-b border-[#9b87f5]/20 android-navbar-fix">
+        <div className="flex items-center space-x-3">
+          <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-sm flex-shrink-0">
             <img
               src="/logo.png"
               alt="StratiFi Logo"
-              className="w-full h-full"
+              className="w-full h-full object-contain"
             />
           </div>
           <span className="text-xl sm:text-2xl md:text-3xl font-medium android-text-fix">
@@ -121,10 +121,10 @@ export default function StratiFiLanding() {
           />
 
           {/* Menu Content */}
-          <div className="absolute top-0 right-0 h-full w-72 sm:w-80 bg-[#0a0613] border-l border-[#AD90FE]/20 shadow-2xl android-mobile-menu">
+          <div className="absolute top-0 right-0 h-full w-72 sm:w-80 bg-gradient-to-b from-[#0a0613] to-[#150d27] border-l border-[#9b87f5]/20 shadow-2xl android-mobile-menu">
             <div className="flex flex-col h-full">
               {/* Menu Header */}
-              <div className="flex items-center justify-between p-6 border-b border-[#AD90FE]/20">
+              <div className="flex items-center justify-between p-6 border-b border-[#9b87f5]/20">
                 <div></div>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -153,7 +153,7 @@ export default function StratiFiLanding() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block p-4 rounded-lg bg-gradient-to-r from-[#9b87f5]/20 to-[#7c3aed]/20 border border-[#AD90FE]/30 hover:border-[#AD90FE]/50 transition-colors"
+                  className="block p-4 rounded-lg bg-gradient-to-r from-[#9b87f5]/20 to-[#7c3aed]/20 border border-[#9b87f5]/30 hover:border-[#9b87f5]/50 transition-colors"
                 >
                   <div className="text-lg font-medium mb-1 text-white">
                     Launch Agent
@@ -175,7 +175,7 @@ export default function StratiFiLanding() {
               </div>
 
               {/* Menu Footer */}
-              <div className="p-6 border-t border-[#AD90FE]/20">
+              <div className="p-6 border-t border-[#9b87f5]/20">
                 <div className="flex items-center space-x-4">
                   <Link
                     href="https://x.com/stratifixyz"

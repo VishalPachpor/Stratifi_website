@@ -30,18 +30,20 @@ export function Footer() {
 
       {/* Footer content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           {/* Brand and description */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-sm">
+              <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-sm flex-shrink-0">
                 <img
                   src="/logo.png"
                   alt="StratiFi Logo"
-                  className="w-full h-full"
+                  className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-xl font-semibold">StratiFi</span>
+              <span className="text-xl sm:text-2xl md:text-3xl font-semibold">
+                StratiFi
+              </span>
             </div>
             <p className="text-gray-400 mb-8 max-w-sm android-text-fix">
               The next-generation DeFi yield optimizer with AI-powered protocol
@@ -104,31 +106,6 @@ export function Footer() {
                     Community
                   </span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-[#AD90FE] transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="text-sm font-medium text-white/80 uppercase tracking-wider mb-4">
-              Legal
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  Terms of Service
                 </Link>
               </li>
             </ul>
