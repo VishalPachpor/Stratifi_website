@@ -84,7 +84,7 @@ export default function HeroSection() {
               <div className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-3 sm:mb-2 leading-tight android-text-fix">
                 <CountingAnimation
                   value={3}
-                  prefix="+"
+                  prefix=""
                   duration={2.5}
                   className="text-xl sm:text-2xl md:text-3xl font-light text-white leading-tight android-number-display"
                 />
@@ -97,8 +97,8 @@ export default function HeroSection() {
               <div className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-3 sm:mb-2 leading-tight android-text-fix">
                 <CountingAnimation
                   value={5}
-                  prefix="+"
-                  suffix="K"
+                  prefix=""
+                  suffix="K+"
                   duration={2.5}
                   className="text-xl sm:text-2xl md:text-3xl font-light text-white leading-tight android-number-display"
                 />
