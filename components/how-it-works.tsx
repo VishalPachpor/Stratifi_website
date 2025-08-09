@@ -17,25 +17,25 @@ export function HowItWorks() {
       icon: Search,
       title: "Scan",
       description:
-        "Continuously sweeps every lending pool in real-time, tracking APR shifts, bonus incentives, and gas swings across every integrated protocol.",
+        "Periodically indexes supported lending markets on Base, tracking base APY and incentives from reliable sources.",
     },
     {
       icon: Calculator,
       title: "Score",
       description:
-        "Rapidly crunches all variables to calculate post-fee yield, green-lighting moves only when the projected upside materially outweighs total costs.",
+        "Computes net APY = base + incentives − gas − slippage, and triggers only when improvement exceeds a configurable threshold.",
     },
     {
       icon: Zap,
       title: "Execute",
       description:
-        "Seamlessly withdraws funds, atomically swaps assets when needed, then redeposits—all fully automated inside your self-custodial smart account.",
+        "Simulates the route, requests your approval, then executes via your self-custodial smart account with limits and safeguards.",
     },
     {
       icon: TrendingUp,
       title: "Compound",
       description:
-        "Collects reward tokens, converts them into your base asset, and reinvests the proceeds back into the strategy for compounding growth.",
+        "Harvests incentives (when available), converts to base asset, and re-deploys according to the active strategy.",
     },
   ];
 
@@ -59,7 +59,7 @@ export function HowItWorks() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl lg:text-7xl font-light text-center mb-16"
           >
-            How StratiFi works
+            How it works
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

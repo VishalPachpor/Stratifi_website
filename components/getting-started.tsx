@@ -7,6 +7,7 @@ const GettingStarted = () => {
   const [isComplete, setIsComplete] = useState(false);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const totalSteps = gettingStartedSteps.length;
 
   return (
     <section
@@ -44,6 +45,7 @@ const GettingStarted = () => {
                   index={index}
                   currentStep={currentStep}
                   isComplete={isComplete}
+                  totalSteps={totalSteps}
                 />
               ))}
             </div>
@@ -56,6 +58,7 @@ const GettingStarted = () => {
                 isComplete={isComplete}
                 setIsComplete={setIsComplete}
                 isInView={isInView}
+                totalSteps={totalSteps}
               />
             </div>
           </motion.div>
@@ -71,14 +74,15 @@ const AnimatedStepCard = ({
   index,
   currentStep,
   isComplete,
+  totalSteps,
 }: {
   step: any;
   index: number;
   currentStep: number;
   isComplete: boolean;
+  totalSteps: number;
 }) => {
   // Calculate if this card should be active based on progress
-  const totalSteps = 7;
   const stepsPerCard = totalSteps / 3; // ~2.33 steps per card
   const cardStartStep = index * stepsPerCard;
   const cardEndStep = (index + 1) * stepsPerCard;
@@ -183,15 +187,15 @@ const AnimatedProgressIndicator = ({
   isComplete,
   setIsComplete,
   isInView,
+  totalSteps,
 }: {
   currentStep: number;
   setCurrentStep: (step: number) => void;
   isComplete: boolean;
   setIsComplete: (complete: boolean) => void;
   isInView: boolean;
+  totalSteps: number;
 }) => {
-  const totalSteps = 7;
-
   useEffect(() => {
     if (!isInView) return;
 

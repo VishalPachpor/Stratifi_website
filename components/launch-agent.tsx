@@ -57,8 +57,8 @@ export function LaunchAgent() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-5xl md:text-6xl lg:text-7xl font-light text-white text-center mb-8 max-w-3xl leading-tight"
         >
-          Start earning
-          <br /> in 60 seconds
+          Get set up
+          <br /> in minutes
         </motion.h2>
 
         {/* Help text */}

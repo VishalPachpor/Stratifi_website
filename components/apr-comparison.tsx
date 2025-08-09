@@ -46,13 +46,16 @@ const APRComparison = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 w-full"
+            className="text-5xl md:text-6xl lg:text-7xl font-light mb-4 w-full"
           >
             <span className="bg-gradient-to-r from-[#9b87f5] to-[#7c3aed] bg-clip-text text-transparent">
-              42.45%
-            </span>{" "}
-            higher APR
+              Potentially higher APR
+            </span>
           </motion.h2>
+
+          <div className="text-xs text-white/50 uppercase tracking-wider mb-4">
+            Example visualization — not financial advice
+          </div>
 
           {/* Description */}
           <motion.div
@@ -62,8 +65,14 @@ const APRComparison = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="text-white/80 text-lg mb-16 space-y-2"
           >
-            <p>Backtesting simulations with USDC markets on Base Network.</p>
-            <p>The simulations are made based on DEFILLAMA data.</p>
+            <p>
+              We tested this on real USDC markets across Base — here's what
+              happened.
+            </p>
+            <p className="text-sm text-white/60">
+              Historical data from DeFiLlama. Past performance doesn't predict
+              future results. Gas and fees vary by market conditions.
+            </p>
           </motion.div>
 
           {/* Animated Graph Lines */}

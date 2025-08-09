@@ -1,18 +1,15 @@
 import type React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
-import SmoothScrollProvider from "../components/smooth-scroll-provider";
+// Smooth scroll removed to fix build issues
 
-// Preload font files for better performance
-const fontPreloadLinks = [
-  { href: '/fonts/SequelSansDisplay-Book.woff2', as: 'font', type: 'font/woff2' },
-  { href: '/fonts/SequelSansDisplay-Book.woff', as: 'font', type: 'font/woff' },
-];
+// Font preloading disabled until font files are added
+const fontPreloadLinks: any[] = [];
 
 export const metadata: Metadata = {
   title: "StratiFi - Agents for DeFi Capital",
   description:
-    "StratiFi delivers personalized, risk-adjusted yield on your crypto assets. Historically higher returns, no overhead.",
+    "Stratifi is your on-chain AI that hunts down the highest yield, moves your funds, and compounds your crypto—automatically.",
   generator: "v0.dev",
   icons: {
     icon: "/logo.png",
@@ -41,9 +38,7 @@ export default function RootLayout({
         ))}
       </head>
       <body className="font-sequel font-light" suppressHydrationWarning={true}>
-        <SmoothScrollProvider smoothness={1.2} effects={true}>
-          {children}
-        </SmoothScrollProvider>
+        {children}
       </body>
     </html>
   );

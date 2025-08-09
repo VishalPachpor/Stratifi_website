@@ -38,76 +38,16 @@ export default function HeroSection() {
 
           {/* Main Heading */}
           <h1 className="text-center max-w-5xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light leading-tight mb-8">
-            Agents for{" "}
-            <span className="bg-gradient-to-r from-[#9b87f5] to-[#7c3aed] bg-clip-text text-transparent font-light">
-              OnChain
-            </span>{" "}
-            Capital
+            Let your crypto move smarter — without giving up control.
           </h1>
 
           {/* Description */}
           <p className="text-center max-w-3xl text-lg sm:text-xl md:text-2xl text-white/90 font-light leading-relaxed mb-12">
-            Stratifi delivers personalized, risk-adjusted yield on your crypto
-            assets. It's as simple as using ChatGPT to maximize your returns.
+            Talk to an on‑chain agent that hunts for better lending rates on
+            Base. It shows the plan, the fees, and only moves when you say so.
           </p>
 
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12 mb-16 w-full max-w-5xl px-4">
-            <div className="text-center min-h-[120px] sm:min-h-[100px] flex flex-col justify-center">
-              <div className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-3 sm:mb-2 leading-tight android-text-fix">
-                <CountingAnimation
-                  value={12.0}
-                  suffix="%"
-                  duration={2.5}
-                  className="text-xl sm:text-2xl md:text-3xl font-light text-white leading-tight android-number-display"
-                />
-              </div>
-              <div className="text-xs sm:text-sm text-white/60 uppercase tracking-wider leading-relaxed px-1">
-                Current APR
-              </div>
-            </div>
-            <div className="text-center min-h-[120px] sm:min-h-[100px] flex flex-col justify-center">
-              <div className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-3 sm:mb-2 leading-tight android-text-fix">
-                <CountingAnimation
-                  value={30}
-                  prefix="$"
-                  suffix="k+"
-                  duration={2.5}
-                  className="text-xl sm:text-2xl md:text-3xl font-light text-white leading-tight android-number-display"
-                />
-              </div>
-              <div className="text-xs sm:text-sm text-white/60 uppercase tracking-wider leading-relaxed px-1">
-                Capital Optimized
-              </div>
-            </div>
-            <div className="text-center min-h-[120px] sm:min-h-[100px] flex flex-col justify-center">
-              <div className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-3 sm:mb-2 leading-tight android-text-fix">
-                <CountingAnimation
-                  value={3}
-                  prefix=""
-                  duration={2.5}
-                  className="text-xl sm:text-2xl md:text-3xl font-light text-white leading-tight android-number-display"
-                />
-              </div>
-              <div className="text-xs sm:text-sm text-white/60 uppercase tracking-wider leading-relaxed px-1">
-                Agents
-              </div>
-            </div>
-            <div className="text-center min-h-[120px] sm:min-h-[100px] flex flex-col justify-center">
-              <div className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-3 sm:mb-2 leading-tight android-text-fix">
-                <CountingAnimation
-                  value={5}
-                  prefix=""
-                  suffix="K+"
-                  duration={2.5}
-                  className="text-xl sm:text-2xl md:text-3xl font-light text-white leading-tight android-number-display"
-                />
-              </div>
-              <div className="text-xs sm:text-sm text-white/60 uppercase tracking-wider leading-relaxed px-1">
-                Autonomous TXs
-              </div>
-            </div>
-          </div>
+          {/* Removed stats until wired to live data */}
 
           {/* CTA Buttons - Simple and Clean */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center w-full max-w-lg px-4">
@@ -115,7 +55,6 @@ export default function HeroSection() {
             <button
               type="button"
               onClick={() => {
-                console.log("Launch Agent clicked!");
                 window.open("https://demo.stratifi.xyz/agent/chat", "_blank");
               }}
               className="w-full sm:w-auto bg-[#AD90FE] text-black font-medium text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-[#9580E8] hover:scale-105 transition-all duration-200 cursor-pointer shadow-lg android-button-fix min-h-[48px]"

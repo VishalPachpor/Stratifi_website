@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Sequel Sans Display Book Font */
+/* Sequel Sans Display Book Font - Fallback to system fonts until font files are added */
+/* 
+To enable Sequel Sans Display Book:
+1. Download font files from https://www.fontshare.com/fonts/sequel-sans-display
+2. Add files to /public/fonts/ directory
+3. Uncomment the @font-face declarations below
+*/
+
+/*
 @font-face {
   font-family: 'Sequel Sans Display Book';
   src: url('/fonts/SequelSansDisplay-Book.woff2') format('woff2'),
@@ -42,6 +50,7 @@
   font-style: italic;
   font-display: swap;
 }
+*/
 
 @layer base {
   :root {
@@ -74,20 +83,20 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "Sequel Sans Display Book", "Sequel Sans Display Book Placeholder", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
     font-feature-settings: "kern" 1, "liga" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   
-  /* Font loading states */
+  /* Font loading states - using system fonts for now */
   .fonts-loaded {
-    font-family: "Sequel Sans Display Book", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
   }
   
   .fonts-fallback {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
   }
 }

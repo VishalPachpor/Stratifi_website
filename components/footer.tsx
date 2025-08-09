@@ -46,8 +46,9 @@ export function Footer() {
               </span>
             </div>
             <p className="text-gray-400 mb-8 max-w-sm android-text-fix">
-              The next-generation DeFi yield optimizer with AI-powered protocol
-              integration for intelligent financial interactions.
+              Self-custodial AI agent that reallocates liquidity across
+              supported lending markets on Base with simulation and user
+              approvals.
             </p>
 
             {/* Social links */}
@@ -90,7 +91,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="#"
+                  href="https://docs.stratifi.xyz/docs/intro"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   Documentation

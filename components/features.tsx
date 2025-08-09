@@ -7,16 +7,18 @@ import Image from "next/image";
 export function Features() {
   return (
     <section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
-      {/* add heading  */}
-      <h2 className="text-7xl pb-24 font-light text-center">Features</h2>
+      {/* heading */}
+      <h2 className="text-7xl pb-24 font-light text-center">
+        What your agent can do
+      </h2>
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         <div className="mx-auto grid gap-8 lg:grid-cols-2">
           <FeatureCard>
             <CardHeader className="pb-3">
               <CardHeading
                 icon={Bot}
-                title="AI-Powered Interface"
-                description="ChatGPT-like interface for intelligent DeFi interactions"
+                title="AI-powered interface"
+                description="Tell it what you want, in plain English. It drafts the route, runs a sim, and waits for your OK."
               />
             </CardHeader>
 
@@ -31,8 +33,8 @@ export function Features() {
             <CardHeader className="pb-3">
               <CardHeading
                 icon={Zap}
-                title="Multi-Protocol Integration"
-                description="Compare and optimize across thousands of DeFi protocols"
+                title="Multi-protocol support"
+                description="Checks net APY after gas and slippage across supported Base lenders: Aave v3, Morpho, Moonwell, Seamless, Compound."
               />
             </CardHeader>
 
@@ -47,15 +49,15 @@ export function Features() {
           </FeatureCard>
 
           <FeatureCard className="p-6 lg:col-span-2">
-            <p className="mx-auto my-6 max-w-md text-balance text-center text-2xl font-semibold">
-              Cross-chain DeFi optimization with real-time market intelligence.
+            <p className="mx-auto my-6 max-w-xl text-balance text-center text-2xl font-semibold">
+              Live on Base. Ethereum and Starknet are up next.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 overflow-hidden px-4">
               <BlockchainLogo label="Ethereum" logoSrc="/ethereum.svg" />
               <BlockchainLogo label="Katana" logoSrc="/katana.jpg" />
               <BlockchainLogo label="Base" logoSrc="/Base.svg" />
-              <BlockchainLogo label="Starknet" logoSrc="/starknet.png" />
+              <BlockchainLogo label="Starknet" logoSrc="/Starknet.png" />
             </div>
           </FeatureCard>
         </div>
@@ -105,20 +107,21 @@ const ChatInterface = () => {
               </div>
             </div>
 
-            {/* Bot response with portfolio */}
+            {/* Bot response demo */}
             <div className="flex gap-3">
               <div className="w-8 h-8 bg-[#AD90FE]/20 rounded-full flex items-center justify-center flex-shrink-0">
                 <span className="text-[#AD90FE] text-sm font-medium">AI</span>
               </div>
               <div className="space-y-2 max-w-[90%]">
                 <div className="bg-[#1e1633] p-3 rounded-lg text-white text-sm">
-                  Your portfolio is up 4.7% this week. Here are some metrics:
+                  Demo response. Connect your wallet to view portfolio and run
+                  simulations before execution.
                 </div>
                 <div className="bg-[#1e1633] p-3 rounded-lg text-white text-sm">
                   <ul className="list-disc pl-4 space-y-1 text-sm">
-                    <li>Check yield opportunities</li>
-                    <li>View transaction history</li>
-                    <li>Analyze token performance</li>
+                    <li>Simulate a rebalance across supported markets</li>
+                    <li>Review gas and slippage assumptions</li>
+                    <li>Approve and execute via your smart account</li>
                   </ul>
                 </div>
               </div>
@@ -147,31 +150,11 @@ const ChatInterface = () => {
 // Component to display the protocols grid
 const ProtocolsGrid = () => {
   const protocols = [
-    {
-      name: "MORPHO",
-      percentage: "55.69%",
-      logoSrc: "/Morpho.svg",
-    },
-    {
-      name: "MOONWELL",
-      percentage: "31.19%",
-      logoSrc: "/moonwell.png",
-    },
-    {
-      name: "SEAMLESS",
-      percentage: "7.61%",
-      logoSrc: "/seamless.avif",
-    },
-    {
-      name: "AAVE",
-      percentage: "6.32%",
-      logoSrc: "/aave.svg",
-    },
-    {
-      name: "COMPOUND",
-      percentage: "6.32%",
-      logoSrc: "/compound.svg",
-    },
+    { name: "MORPHO", logoSrc: "/Morpho.svg" },
+    { name: "MOONWELL", logoSrc: "/moonwell.png" },
+    { name: "SEAMLESS", logoSrc: "/seamless.avif" },
+    { name: "AAVE", logoSrc: "/aave.svg" },
+    { name: "COMPOUND", logoSrc: "/compound.svg" },
   ];
 
   return (
@@ -209,7 +192,7 @@ const ProtocolsGrid = () => {
             <div className="text-white font-medium text-sm ">
               {protocol.name}
             </div>
-            <div className="text-[#AD90FE] font-sm">{protocol.percentage}</div>
+            <div className="text-[#AD90FE] font-sm">Supported</div>
           </div>
         ))}
       </div>

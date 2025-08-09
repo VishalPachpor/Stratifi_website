@@ -13,29 +13,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 export default function StratiFiLanding() {
-  const [currentSection, setCurrentSection] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const sections = [
-    "01. YEARLY APR",
-    "02. ABOUT STRATIFI",
-    "03. PROTOCOLS",
-    "04. BENEFITS",
-    "05. STRATIFI AI",
-    "06. LAUNCH PLATFORM",
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const sectionIndex = Math.floor(scrollPosition / windowHeight);
-      setCurrentSection(Math.min(sectionIndex, sections.length - 1));
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
@@ -203,16 +181,6 @@ export default function StratiFiLanding() {
           </div>
         </div>
       )}
-
-      {/* Left Section Indicator */}
-      <div className="fixed left-8 top-1/2 transform -translate-y-1/2 z-40">
-        {/* <div className="text-xs text-gray-500 font-mono tracking-wider">{sections[currentSection]}</div> */}
-      </div>
-
-      {/* Right Section Indicator */}
-      <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-40">
-        {/* <div className="text-xs text-gray-500 font-mono tracking-wider">CORE BENEFITS</div> */}
-      </div>
 
       {/* Main Content */}
       <main className="relative z-10">
