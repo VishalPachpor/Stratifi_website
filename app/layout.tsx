@@ -1,5 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 // Smooth scroll removed to fix build issues
 
@@ -36,6 +37,18 @@ export default function RootLayout({
             crossOrigin="anonymous"
           />
         ))}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-QV7DEMYB2V"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-QV7DEMYB2V');
+          `}
+        </Script>
       </head>
       <body className="font-sequel font-light" suppressHydrationWarning={true}>
         {children}
