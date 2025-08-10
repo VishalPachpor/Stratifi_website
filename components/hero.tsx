@@ -42,7 +42,7 @@ export default function HeroSection() {
 
           {/* Description */}
           <p className="text-center max-w-3xl text-lg sm:text-xl md:text-2xl text-white/90 font-light leading-relaxed mb-12">
-            Talk to an on‑chain agent that hunts for better lending rates on-chain.
+            Talk to an on‑chain agent that hunts for better lending rates.
              It shows the plan, the fees, and only moves when you say so.
           </p>
 
