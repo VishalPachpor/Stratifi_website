@@ -249,9 +249,12 @@ canvas {
   }
 
   @media (max-width: 768px) {
-    .halftone-spotlight {
-      --dot-size: 10px;
-      opacity: 0.75;
+    .halftone-spotlight { --dot-size: 10px; opacity: 0.75; }
+    .hero-bg { transform: translateZ(0); }
+    .hero-bg .halftone-spotlight {
+      -webkit-mask-image: radial-gradient(circle at 50% 30%, #000 0%, #000 50%, transparent 70%);
+      mask-image: radial-gradient(circle at 50% 30%, #000 0%, #000 50%, transparent 70%);
+      mix-blend-mode: screen;
     }
   }
 

@@ -12,17 +12,21 @@ export default function HeroSection() {
     <>
       <section className="hero-section relative w-full min-h-screen bg-gradient-to-br from-[#0a0613] to-[#150d27] text-white overflow-hidden pt-16 sm:pt-20 md:pt-24">
         {/* Background Effects */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute inset-0 bg-black/80" />
+        <div className="hero-bg absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 bg-black/70 md:bg-black/80" />
           {/* Halftone spotlight inspired by Arma */}
           <div
             aria-hidden
             className="halftone-spotlight halftone-spotlight--brand"
             style={{
-              width: "clamp(640px, 72vw, 940px)",
-              height: "clamp(640px, 72vw, 940px)",
+              width: isMobile
+                ? "clamp(320px, 110vw, 560px)"
+                : "clamp(640px, 72vw, 940px)",
+              height: isMobile
+                ? "clamp(320px, 110vw, 560px)"
+                : "clamp(640px, 72vw, 940px)",
               left: "50%",
-              top: "-6%",
+              top: isMobile ? "0%" : "-6%",
               transform: "translateX(-50%)",
             }}
           />
@@ -42,8 +46,8 @@ export default function HeroSection() {
 
           {/* Description */}
           <p className="text-center max-w-3xl text-lg sm:text-xl md:text-2xl text-white/90 font-light leading-relaxed mb-12">
-            Talk to an on‑chain agent that hunts for better lending rates.
-             It shows the plan, the fees, and only moves when you say so.
+            Talk to an on‑chain agent that hunts for better lending rates. It
+            shows the plan, the fees, and only moves when you say so.
           </p>
 
           {/* Removed stats until wired to live data */}
