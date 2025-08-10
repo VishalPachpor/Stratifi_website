@@ -26,7 +26,7 @@ export default function StratiFiLanding() {
 
       {/* Background Grid Pattern */}
       <div
-        className="fixed inset-0 opacity-[0.02]"
+        className="fixed inset-0 opacity-[0.02] pointer-events-none"
         style={{
           backgroundImage: `
             linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),

@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Globe3D from "./globe-3d";
 import CountingAnimation from "./counting-animation";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -13,20 +12,20 @@ export default function HeroSection() {
     <>
       <section className="hero-section relative w-full min-h-screen bg-gradient-to-br from-[#0a0613] to-[#150d27] text-white overflow-hidden pt-16 sm:pt-20 md:pt-24">
         {/* Background Effects */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-black/80"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-b from-blue-500/20 to-purple-600/10 blur-3xl"></div>
-        </div>
-
-        {/* 3D Globe Background */}
-        <div
-          className={`absolute pointer-events-none ${
-            isMobile
-              ? "top-[15%] left-1/2 -translate-x-1/2 w-[180px] h-[180px] opacity-50"
-              : "top-[10%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] opacity-80"
-          }`}
-        >
-          <Globe3D className="w-full h-full" />
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 bg-black/80" />
+          {/* Halftone spotlight inspired by Arma */}
+          <div
+            aria-hidden
+            className="halftone-spotlight halftone-spotlight--brand"
+            style={{
+              width: "clamp(640px, 72vw, 940px)",
+              height: "clamp(640px, 72vw, 940px)",
+              left: "50%",
+              top: "-6%",
+              transform: "translateX(-50%)",
+            }}
+          />
         </div>
 
         {/* Main Content */}
@@ -38,13 +37,13 @@ export default function HeroSection() {
 
           {/* Main Heading */}
           <h1 className="text-center max-w-5xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light leading-tight mb-8">
-            Let your crypto move smarter — without giving up control.
+            Let your crypto move smarter without giving up control.
           </h1>
 
           {/* Description */}
           <p className="text-center max-w-3xl text-lg sm:text-xl md:text-2xl text-white/90 font-light leading-relaxed mb-12">
-            Talk to an on‑chain agent that hunts for better lending rates on
-            Base. It shows the plan, the fees, and only moves when you say so.
+            Talk to an on‑chain agent that hunts for better lending rates on-chain.
+             It shows the plan, the fees, and only moves when you say so.
           </p>
 
           {/* Removed stats until wired to live data */}

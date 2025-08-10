@@ -184,6 +184,77 @@ canvas {
   isolation: isolate;
 }
 
+  /* Halftone spotlight background effect */
+  .halftone-spotlight {
+    /* Tunable variables */
+    --halftone-color: var(--primary); /* use theme primary by default */
+    --dot-size: 8px;
+
+    position: absolute;
+    border-radius: 9999px;
+    pointer-events: none;
+    /* Two-layer background: a soft radial glow and a dot grid */
+    background-image:
+      radial-gradient(circle at 60% 40%, hsl(var(--halftone-color) / 0.6) 0%, hsl(var(--halftone-color) / 0.35) 35%, transparent 60%),
+      radial-gradient(hsl(var(--halftone-color) / 0.9) 1px, transparent 1px);
+    background-size: 100% 100%, var(--dot-size) var(--dot-size);
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
+    /* Mask to shape the dots into a big soft circle with feathered edge */
+    -webkit-mask-image: radial-gradient(circle at 60% 40%, #000 0%, #000 55%, transparent 72%);
+    mask-image: radial-gradient(circle at 60% 40%, #000 0%, #000 55%, transparent 72%);
+    opacity: 0.9;
+    filter: saturate(115%) contrast(110%);
+    mix-blend-mode: screen; /* looks great on dark backgrounds */
+  }
+
+  /* Brand variant using theme purple */
+  .halftone-spotlight--brand {
+    --dot-size: 12px;
+    --halftone-color: var(--primary);
+    background-image:
+      radial-gradient(circle at 62% 38%, hsl(var(--halftone-color) / 0.65) 0%, hsl(var(--halftone-color) / 0.45) 35%, transparent 62%),
+      radial-gradient(hsl(var(--halftone-color) / 0.95) 1.1px, transparent 1.1px),
+      radial-gradient(hsl(var(--halftone-color) / 0.95) 1.1px, transparent 1.1px);
+    background-size: 100% 100%, var(--dot-size) var(--dot-size), var(--dot-size) var(--dot-size);
+    background-position: center, 0 0, calc(var(--dot-size) / 2) calc(var(--dot-size) / 2);
+    background-repeat: no-repeat, repeat, repeat;
+    -webkit-mask-image: radial-gradient(circle at 62% 38%, #000 0%, #000 55%, transparent 72%);
+    mask-image: radial-gradient(circle at 62% 38%, #000 0%, #000 55%, transparent 72%);
+    opacity: 0.95;
+    filter: saturate(115%) contrast(115%);
+  }
+
+  /* Exact-theme variant: vibrant green halftone like the reference */
+  .halftone-spotlight--arma {
+    --dot-size: 12px;
+    background-image:
+      radial-gradient(circle at 62% 38%, rgba(179, 255, 90, 0.70) 0%, rgba(179, 255, 90, 0.50) 35%, transparent 62%),
+      radial-gradient(rgba(179, 255, 90, 0.95) 1.1px, transparent 1.1px),
+      radial-gradient(rgba(179, 255, 90, 0.95) 1.1px, transparent 1.1px);
+    background-size: 100% 100%, var(--dot-size) var(--dot-size), var(--dot-size) var(--dot-size);
+    background-position: center, 0 0, calc(var(--dot-size) / 2) calc(var(--dot-size) / 2);
+    background-repeat: no-repeat, repeat, repeat;
+    -webkit-mask-image: radial-gradient(circle at 62% 38%, #000 0%, #000 55%, transparent 72%);
+    mask-image: radial-gradient(circle at 62% 38%, #000 0%, #000 55%, transparent 72%);
+    opacity: 0.95;
+    filter: saturate(120%) contrast(118%);
+  }
+
+  @media (max-width: 768px) {
+    .halftone-spotlight--arma {
+      --dot-size: 14px;
+      opacity: 0.85;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .halftone-spotlight {
+      --dot-size: 10px;
+      opacity: 0.75;
+    }
+  }
+
 /* Android-specific text fixes */
 .android-text-fix {
   -webkit-text-size-adjust: 100%;
