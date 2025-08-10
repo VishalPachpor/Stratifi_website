@@ -37,7 +37,7 @@ export default function StratiFiLanding() {
       />
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-4 sm:px-8 py-4 sm:py-6 bg-gradient-to-r from-[#0a0613]/95 to-[#150d27]/95 backdrop-blur-md border-b border-[#9b87f5]/20 android-navbar-fix">
+      <nav className="fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-4 sm:px-8 py-3 sm:py-3 bg-gradient-to-r from-[#0a0613]/95 to-[#150d27]/95 backdrop-blur-md border-b border-[#9b87f5]/20 android-navbar-fix">
         <div className="flex items-center space-x-3">
           <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-sm flex-shrink-0">
             <img
