@@ -1,153 +1,56 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowUpRight, Send, X } from "lucide-react";
+import { DollarSign } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="relative bg-black text-white overflow-hidden border-t border-white/10">
-      {/* Background elements */}
-      <div className="absolute inset-0 z-0">
-        {/* Subtle gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black to-[#0a0613]"></div>
-
-        {/* Grid overlay */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: "50px 50px",
-          }}
-        />
-
-        {/* Subtle glow */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-[#AD90FE]/5 blur-3xl"></div>
-      </div>
-
-      {/* Footer content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
-          {/* Brand and description */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-sm flex-shrink-0">
-                <img
-                  src="/logo.png"
-                  alt="StratiFi Logo"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <span className="text-xl sm:text-2xl md:text-3xl font-semibold">
-                StratiFi
-              </span>
-            </div>
-            <p className="text-gray-400 mb-8 max-w-sm android-text-fix">
-              Self-custodial AI agent that reallocates liquidity across
-              supported lending markets on Base with simulation and user
-              approvals.
-            </p>
-
-            {/* Social links */}
-            <div className="flex items-center gap-4">
-              <Link href="https://x.com/stratifixyz" className="group">
-                <div className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors duration-300">
-                  <X className="w-5 h-5 group-hover:text-[#AD90FE] transition-colors duration-300" />
-                </div>
-              </Link>
-              <Link href="https://t.me/stratifixyz" className="group">
-                <div className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors duration-300">
-                  <Send className="w-5 h-5 group-hover:text-[#AD90FE] transition-colors duration-300" />
-                </div>
-              </Link>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-sm font-medium text-white/80 uppercase tracking-wider mb-4">
-              Company
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="https://docs.stratifi.xyz/docs/stratifi-ai-agent/stratifi-ai-details/"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  About
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="text-sm font-medium text-white/80 uppercase tracking-wider mb-4">
-              Resources
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="https://docs.stratifi.xyz/docs/intro"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                >
-                  Documentation
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="https://x.com/stratifixyz"
-                  className="group flex items-center gap-1"
-                >
-                  <span className="text-gray-400 group-hover:text-white transition-colors duration-300">
-                    Community
-                  </span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-[#AD90FE] transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-                </Link>
-              </li>
-            </ul>
-          </div>
+    <footer className="w-full bg-white/80 supports-[backdrop-filter]:bg-white/60 backdrop-blur-sm text-black border-t border-black/10">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-between gap-3 sm:gap-2 text-center sm:text-left">
+        {/* Left: Success Fee pill */}
+        <div className="inline-flex items-center gap-2 rounded-full border border-[#c479fe]/40 px-3 py-1 text-sm hover:bg-[#c479fe]/10 transition-colors">
+          <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#c479fe]/20">
+            <DollarSign className="w-3 h-3 text-[#c479fe]" />
+          </span>
+          <span>Success Fee</span>
         </div>
 
-        {/* Newsletter and copyright */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8">
-          {/* Newsletter signup */}
-          <div className="w-full lg:max-w-md">
-            <h4 className="text-sm font-medium mb-3 android-text-fix">
-              Stay updated with our latest developments
-            </h4>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-white/5 rounded-lg px-4 py-3 sm:py-2 border border-white/10 focus:outline-none focus:border-[#AD90FE] transition-colors flex-1 min-w-0 android-input-fix"
-              />
-              <button className="bg-[#AD90FE] hover:bg-[#AD90FE]/90 text-white px-4 sm:px-6 py-3 sm:py-2 rounded-lg transition-colors whitespace-nowrap android-button-fix min-h-[48px] sm:min-h-auto flex-shrink-0">
-                <span className="android-text-fix">Subscribe</span>
-              </button>
+        {/* Center: Copyright */}
+        <p className="text-sm text-black/60">© 2025, Stratifi.xyz</p>
+
+        {/* Right: Pills */}
+        <div className="flex items-center gap-2 flex-wrap justify-center sm:justify-end">
+          <Link
+            href="#"
+            className="inline-flex items-center rounded-full border border-[#c479fe]/40 px-3 py-1 text-sm hover:bg-[#c479fe]/10"
+          >
+            Learn
+          </Link>
+          <Link
+            href="https://x.com/stratifixyz"
+            target="_blank"
+            aria-label="Twitter"
+            className="inline-flex items-center  px-3 py-1 hover:bg-[#c479fe]/10"
+          >
+            <div className="w-5 h-5 text-gray-600 hover:text-[#c479fe] transition-colors">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
             </div>
-          </div>
-
-          {/* Copyright */}
-          <div className="text-gray-400 text-sm w-full lg:w-auto">
-            <p className="android-text-fix">
-              © {new Date().getFullYear()} StratiFi. All rights reserved.
-            </p>
-            <p className="mt-2 text-xs text-gray-500 android-text-fix">
-              Risks & disclosures: Yield is variable and not guaranteed. DeFi
-              carries smart-contract and protocol risks.
-            </p>
-          </div>
+          </Link>
+          <Link
+            href="https://t.me/stratifixyz"
+            target="_blank"
+            aria-label="Telegram"
+            className="inline-flex items-center  px-3 py-1 hover:bg-[#c479fe]/10"
+          >
+            <div className="w-6 h-6 text-gray-600 hover:text-[#c479fe] transition-colors">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+              </svg>
+            </div>
+          </Link>
         </div>
-      </div>
-
-      {/* Corner decoration */}
-      <div className="absolute bottom-0 right-0 w-20 h-20 overflow-hidden">
-        <div className="absolute bottom-0 right-0 w-16 h-16 border-r-2 border-b-2 border-[#AD90FE]/50 rounded-tl-lg"></div>
       </div>
     </footer>
   );

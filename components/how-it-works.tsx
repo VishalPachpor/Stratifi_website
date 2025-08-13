@@ -1,58 +1,38 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Search,
-  Calculator,
-  Zap,
-  TrendingUp,
-  Wallet,
-  ArrowDown,
-  Play,
-} from "lucide-react";
+import { BarChart3, KeyRound, Square } from "lucide-react";
 
 export function HowItWorks() {
-  const steps = [
+  const cards = [
     {
-      icon: Search,
-      title: "Scan",
+      icon: BarChart3,
+      title: "Scan ",
       description:
-        "Periodically indexes supported lending markets on Base, tracking base APY and incentives from reliable sources.",
+        "Monitors markets, calculates net APY, and flags top opportunities.",
     },
     {
-      icon: Calculator,
-      title: "Score",
-      description:
-        "Computes net APY = base + incentives − gas − slippage, and triggers only when improvement exceeds a configurable threshold.",
-    },
-    {
-      icon: Zap,
+      icon: KeyRound,
       title: "Execute",
-      description:
-        "Simulates the route, requests your approval, then executes via your self-custodial smart account with limits and safeguards.",
+      description: "Simulates route, gets approval, and moves funds securely.",
     },
     {
-      icon: TrendingUp,
+      icon: Square,
       title: "Compound",
       description:
-        "Harvests incentives (when available), converts to base asset, and re-deploys according to the active strategy.",
+        "Reinvests incentives and redeploys into best-performing pools.",
     },
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#0a0613] font-light text-white antialiased py-20">
-      {/* Background elements */}
+    <section className="relative w-full overflow-hidden bg-white font-light text-black antialiased py-20">
       <div className="absolute inset-0 z-0">
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/80"></div>
-
-        {/* Glowing circle */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-b from-blue-500/10 to-purple-600/5 blur-3xl"></div>
+        <div className="absolute inset-0 bg-white"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-b from-[#c479fe]/10 to-transparent blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-        {/* How Stratifi works section */}
-        <div className="mb-20">
+        <div className="mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -62,34 +42,30 @@ export function HowItWorks() {
             How it works
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {steps.map((step, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {cards.map((card, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative"
+                className={`relative rounded-2xl border border-black/10 bg-white transition-colors duration-300 hover:bg-[#f2f2f2]`}
               >
-                <div className="relative p-8 border border-white/10 rounded-2xl bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-sm hover:border-[#AD90FE]/30 transition-all duration-300">
-                  {/* Corner decorations */}
-                  <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-[#AD90FE] drop-shadow-[0_0_6px_#AD90FE]" />
-                  <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-[#AD90FE] drop-shadow-[0_0_6px_#AD90FE]" />
-                  <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-[#AD90FE] drop-shadow-[0_0_6px_#AD90FE]" />
-                  <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-[#AD90FE] drop-shadow-[0_0_6px_#AD90FE]" />
-
+                <div className="p-6 md:p-8">
                   <div className="flex items-start gap-6">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#AD90FE] to-[#7c3aed] flex items-center justify-center">
-                        <step.icon className="w-6 h-6 text-white" />
+                      <div className="w-14 h-14 rounded-2xl bg-[#f2f2f2] flex items-center justify-center">
+                        {/* icon */}
+                        {/* @ts-ignore dynamic icon */}
+                        <card.icon className="w-6 h-6 text-black" />
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-3 text-white">
-                        {step.title}
+                      <h3 className="text-2xl leading-snug font-medium text-black whitespace-pre-line">
+                        {card.title}
                       </h3>
-                      <p className="text-white/70 leading-relaxed">
-                        {step.description}
+                      <p className="text-black/70 leading-relaxed mt-3">
+                        {card.description}
                       </p>
                     </div>
                   </div>

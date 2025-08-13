@@ -54,26 +54,49 @@ To enable Sequel Sans Display Book:
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 271 81% 56%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    /* Light theme */
+    --background: 0 0% 100%; /* white */
+    --foreground: 0 0% 0%;   /* black */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 281 99% 72%; /* #c479fe */
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 20%;
+    --accent: 281 99% 72%;
+    --accent-foreground: 0 0% 0%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 271 81% 56%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 281 99% 72%;
     --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 0%; /* black */
+    --foreground: 0 0% 100%; /* white */
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 281 99% 72%; /* #c479fe */
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 80%;
+    --accent: 85 100% 85%; /* lime green #C7FF4D equivalent */
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 281 99% 72%;
   }
 }
 
@@ -108,7 +131,7 @@ html {
 
 .neumorphic-button::after {
   content: '';
-  @apply absolute inset-0 opacity-0 transition-opacity duration-300 bg-gradient-to-br from-[#9b87f5]/20 to-transparent rounded-full;
+  @apply absolute inset-0 opacity-0 transition-opacity duration-300 bg-gradient-to-br from-[#c479fe]/20 to-transparent rounded-full;
 }
   
 .neumorphic-button:hover::after {
@@ -125,12 +148,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(147, 51, 234, 0.3);
+  background: rgba(196, 121, 254, 0.3);
   border-radius: 1px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(147, 51, 234, 0.5);
+  background: rgba(196, 121, 254, 0.5);
 }
 
 /* Typography improvements */
@@ -203,9 +226,9 @@ canvas {
     /* Mask to shape the dots into a big soft circle with feathered edge */
     -webkit-mask-image: radial-gradient(circle at 60% 40%, #000 0%, #000 55%, transparent 72%);
     mask-image: radial-gradient(circle at 60% 40%, #000 0%, #000 55%, transparent 72%);
-    opacity: 0.9;
-    filter: saturate(115%) contrast(110%);
-    mix-blend-mode: screen; /* looks great on dark backgrounds */
+    opacity: 0.6;
+    filter: saturate(110%) contrast(105%);
+    mix-blend-mode: multiply; /* better on light backgrounds */
   }
 
   /* Brand variant using theme purple */
@@ -306,16 +329,16 @@ canvas {
 }
 
 /* Android navigation fixes */
-.android-navbar-fix {
-  position: fixed;
-  top: 0;
-  transform: translateZ(0);
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  background-color: #000000 !important; /* Solid black for Android */
-  backdrop-filter: none !important; /* Disable blur on mobile */
-}
+  .android-navbar-fix {
+    position: fixed;
+    top: 0;
+    transform: translateZ(0);
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: #ffffff !important; /* Solid white for Android */
+    backdrop-filter: none !important; /* Disable blur on mobile */
+  }
 
 /* Android viewport handling */
 @supports (-webkit-touch-callout: none) {
@@ -400,7 +423,7 @@ canvas {
   /* Target Android Chrome and Samsung Internet */
   @supports (-webkit-appearance: none) {
     .android-navbar-fix {
-      background: #000000 !important;
+      background: #ffffff !important;
       backdrop-filter: none !important;
       -webkit-backdrop-filter: none !important;
     }
@@ -408,7 +431,7 @@ canvas {
   
   /* Fallback for all mobile browsers */
   .android-navbar-fix {
-    background: linear-gradient(180deg, #000000 0%, #000000 100%) !important;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%) !important;
   }
 }
 
