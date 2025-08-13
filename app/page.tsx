@@ -14,7 +14,7 @@ export default function StratiFiLanding() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-black relative overflow-x-hidden">
+    <div className="min-h-screen bg-white text-black relative overflow-x-hidden scroll-smooth scroll-optimized no-scroll-jank">
       <HeroSection />
       <HowItWorks />
       <APRComparison />

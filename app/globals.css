@@ -124,9 +124,57 @@ To enable Sequel Sans Display Book:
   }
 }
 
-/* Smooth scrolling */
+/* Enhanced smooth scrolling */
 html {
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Smooth scrolling for all elements */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Optimize scrolling performance */
+body {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+}
+
+/* Smooth scroll for specific containers */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Prevent scroll chaining */
+section {
+  overscroll-behavior: contain;
+}
+
+/* Optimize animations during scroll */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  * {
+    scroll-behavior: auto;
+  }
 }
 
 .neumorphic-button::after {
@@ -459,5 +507,60 @@ canvas {
   .hero-section .absolute[class*="pointer-events-none"] {
     top: 5% !important;
     transform: translateX(-50%) translateZ(0) scale(0.8) !important;
+  }
+}
+
+/* Enhanced scroll performance utilities */
+.scroll-smooth {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-auto {
+  scroll-behavior: auto;
+}
+
+/* Optimize scroll performance for animations */
+.scroll-optimized {
+  will-change: scroll-position;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Smooth scroll snap */
+.scroll-snap {
+  scroll-snap-type: y proximity;
+  scroll-snap-align: start;
+}
+
+/* Prevent scroll jank */
+.no-scroll-jank {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+/* Optimize for mobile scrolling */
+@media (max-width: 768px) {
+  html, body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+  
+  .mobile-smooth {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+}
+
+/* High refresh rate displays */
+@media (min-resolution: 120dpi) {
+  .high-refresh {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
   }
 }

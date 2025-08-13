@@ -2,17 +2,17 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 /* icons now loaded from /public via next/image */
 
 /* ------------------------------ globe background ------------------------------ */
-function meridian(cx: number, cy: number, r: number, a: number) {
-  const rx = r;
-  const ry = r * 0.42;
-  const x1 = cx - rx * Math.cos(a);
-  const x2 = cx + rx * Math.cos(a);
-  const y = cy;
-  return `M ${x1} ${y} A ${rx} ${ry} 0 0 1 ${x2} ${y}`;
+// Base meridian path (vertical ellipse segment). We rotate this around the center
+// to render evenly spaced longitudes that align like a globe.
+function meridian(cx: number, cy: number, r: number) {
+  const rx = r * 0.42; // horizontal squash ratio to simulate perspective
+  const ry = r;
+  return `M ${cx} ${cy - ry} A ${rx} ${ry} 0 0 1 ${cx} ${cy + ry}`;
 }
 
 // deterministic RNG to avoid hydration mismatches
@@ -24,14 +24,21 @@ function createSeededRng(seed: number) {
   };
 }
 
+// Quantize floating values so Node vs Browser floating point formatting
+// cannot produce tiny rounding differences during hydration.
+function quantize(value: number, decimals = 2): number {
+  const factor = Math.pow(10, decimals);
+  return Math.round(value * factor) / factor;
+}
+
 const STAR_RECTS = (() => {
   const rng = createSeededRng(42);
   return Array.from({ length: 140 }).map(() => {
     const angle = rng() * Math.PI * 2;
     const radius = 360 * Math.sqrt(rng());
-    const x = 500 + radius * Math.cos(angle);
-    const y = 540 + radius * Math.sin(angle) * 0.56;
-    const size = rng() * 1.6 + 0.4;
+    const x = quantize(500 + radius * Math.cos(angle));
+    const y = quantize(500 + radius * Math.sin(angle) * 0.56);
+    const size = quantize(rng() * 1.6 + 0.4, 2);
     return { x, y, size };
   });
 })();
@@ -39,7 +46,7 @@ const STAR_RECTS = (() => {
 const GlobeBackground = () => (
   <svg
     viewBox="0 0 1000 1000"
-    className="pointer-events-none absolute left-1/2 top-[52%] -z-10 h-[1200px] w-[1200px] -translate-x-1/2 -translate-y-1/2"
+    className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[900px] w-[900px] md:h-[1100px] md:w-[1100px] -translate-x-1/2 -translate-y-1/2"
     aria-hidden
   >
     <defs>
@@ -48,10 +55,10 @@ const GlobeBackground = () => (
         <stop offset="70%" stopColor="hsl(var(--primary))" stopOpacity="0.0" />
       </radialGradient>
       <mask id="sphere">
-        <circle cx="500" cy="540" r="400" fill="#fff" />
+        <circle cx="500" cy="500" r="400" fill="#fff" />
       </mask>
     </defs>
-    <circle cx="500" cy="540" r="400" fill="url(#g)" />
+    <circle cx="500" cy="500" r="400" fill="url(#g)" />
     <g
       mask="url(#sphere)"
       stroke="hsl(var(--muted-foreground))"
@@ -62,38 +69,31 @@ const GlobeBackground = () => (
         <circle
           key={i}
           cx="500"
-          cy="540"
+          cy="500"
           r={85 + i * 45}
           fill="none"
           strokeDasharray="1 14"
         />
       ))}
-      {[...Array(12)].map((_, i) => (
-        <path
-          key={i}
-          d={meridian(500, 540, 400, (i * Math.PI) / 6)}
-          fill="none"
-          strokeDasharray="1 14"
-        />
-      ))}
+      {[...Array(12)].map((_, i) => {
+        const rotation = (i * 180) / 12; // distribute across 180° to avoid duplicates
+        return (
+          <path
+            key={i}
+            d={meridian(500, 500, 400)}
+            transform={`rotate(${rotation} 500 500)`}
+            fill="none"
+            strokeDasharray="1 14"
+          />
+        );
+      })}
     </g>
     <g fill="hsl(var(--muted-foreground))" opacity="0.3" mask="url(#sphere)">
       {STAR_RECTS.map((r, i) => (
         <rect key={i} x={r.x} y={r.y} width={r.size} height={r.size} />
       ))}
     </g>
-    <g
-      stroke="hsl(var(--muted-foreground))"
-      strokeWidth="1.5"
-      fill="none"
-      opacity="0.4"
-    >
-      {/* subtle curve beneath the header to visually complete the globe */}
-      <path d="M220 240 A 380 180 0 0 1 780 240" strokeLinecap="round" />
-      <path d="M360 360c32-22 64-35 100-48" />
-      <path d="M720 740h42" strokeLinecap="round" />
-      <path d="M764 740h42" strokeLinecap="round" />
-    </g>
+    {/* removed decorative strokes */}
     {/* replace small decorative circle with a rounded square near the top center */}
     <rect
       x="492"
@@ -190,14 +190,26 @@ const Card: React.FC<CardProps> = ({
 /* -------------------------------- section -------------------------------- */
 const APRComparison = () => {
   return (
-    <section className="relative isolate overflow-hidden bg-background py-24">
+    <section className="relative isolate overflow-hidden bg-background py-32 md:py-40 scroll-smooth scroll-optimized no-scroll-jank">
       <GlobeBackground />
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
-        <h2 className="mb-12 text-center text-3xl font-medium tracking-tight text-primary">
+        <motion.h2
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mb-12 text-center text-3xl font-medium tracking-tight text-black"
+        >
           Protocols
-        </h2>
+        </motion.h2>
         {/* strict single row with visible gaps */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-10"
+        >
           <Card name="AAVE V3" apy="3.57%" logoSrc="/aave.svg" />
           <Card name="COMPOUND" apy="6.39%" logoSrc="/compound.svg" />
           <Card name="MORPHO BLUE" apy="7.67%" logoSrc="/morpho.jpg" />
@@ -209,7 +221,7 @@ const APRComparison = () => {
             logoWrapperClassName="top-5"
           />
           <Card name="SEAMLESS" apy="9.13%" logoSrc="/seamless.svg" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

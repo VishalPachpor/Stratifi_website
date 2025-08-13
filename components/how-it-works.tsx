@@ -25,7 +25,7 @@ export function HowItWorks() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-white font-light text-black antialiased py-20">
+    <section className="relative w-full overflow-hidden bg-white font-light text-black antialiased py-20 scroll-smooth scroll-optimized no-scroll-jank">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-white"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-b from-[#c479fe]/10 to-transparent blur-3xl"></div>

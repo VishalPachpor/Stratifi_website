@@ -2,11 +2,18 @@
 
 import Link from "next/link";
 import { DollarSign } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function Footer() {
   return (
     <footer className="w-full bg-white/80 supports-[backdrop-filter]:bg-white/60 backdrop-blur-sm text-black border-t border-black/10">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-between gap-3 sm:gap-2 text-center sm:text-left">
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-between gap-3 sm:gap-2 text-center sm:text-left"
+      >
         {/* Left: Success Fee pill */}
         <div className="inline-flex items-center gap-2 rounded-full border border-[#c479fe]/40 px-3 py-1 text-sm hover:bg-[#c479fe]/10 transition-colors">
           <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#c479fe]/20">
@@ -22,7 +29,7 @@ export function Footer() {
         <div className="flex items-center gap-2 flex-wrap justify-center sm:justify-end">
           <Link
             href="#"
-            className="inline-flex items-center rounded-full border border-[#c479fe]/40 px-3 py-1 text-sm hover:bg-[#c479fe]/10"
+            className="inline-flex items-center rounded-full border border-[#c479fe]/40 px-3 py-1 text-sm hover:bg-[#c479fe]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c479fe] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
           >
             Learn
           </Link>
@@ -30,7 +37,7 @@ export function Footer() {
             href="https://x.com/stratifixyz"
             target="_blank"
             aria-label="Twitter"
-            className="inline-flex items-center  px-3 py-1 hover:bg-[#c479fe]/10"
+            className="inline-flex items-center  px-3 py-1 hover:bg-[#c479fe]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c479fe] focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-full"
           >
             <div className="w-5 h-5 text-gray-600 hover:text-[#c479fe] transition-colors">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -42,7 +49,7 @@ export function Footer() {
             href="https://t.me/stratifixyz"
             target="_blank"
             aria-label="Telegram"
-            className="inline-flex items-center  px-3 py-1 hover:bg-[#c479fe]/10"
+            className="inline-flex items-center  px-3 py-1 hover:bg-[#c479fe]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c479fe] focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-full"
           >
             <div className="w-6 h-6 text-gray-600 hover:text-[#c479fe] transition-colors">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -51,7 +58,7 @@ export function Footer() {
             </div>
           </Link>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 }

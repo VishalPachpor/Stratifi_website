@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth scroll-optimized no-scroll-jank">
       <head>
         {fontPreloadLinks.map((link, index) => (
           <link
@@ -50,7 +50,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className="font-sequel font-light" suppressHydrationWarning={true}>
+      <body className="scroll-smooth scroll-optimized no-scroll-jank">
         {children}
       </body>
     </html>
