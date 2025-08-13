@@ -217,8 +217,8 @@ const APRComparison = () => {
             name="MOONWELL"
             apy="7.48%"
             logoSrc="/moonwell.svg"
-            logoClassName="h-16 w-16 md:h-20 md:w-20"
-            logoWrapperClassName="top-5"
+            logoClassName="h-16 w-16 md:h-20 md:w-20 object-top"
+            logoWrapperClassName="top-[10px]"
           />
           <Card name="SEAMLESS" apy="9.13%" logoSrc="/seamless.svg" />
         </motion.div>

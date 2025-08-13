@@ -91,43 +91,45 @@ export default function HeroSection() {
               <span className="android-text-fix">Join Whitelist</span>
             </button>
           </motion.div>
-          {/* Chains row */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
-            className="mt-6 flex items-center justify-center gap-6 opacity-80"
-          >
-            <Image
-              src="/ETH.svg"
-              alt="Ethereum"
-              width={36}
-              height={36}
-              className="h-8 w-auto"
-            />
-            <Image
-              src="/KatanaLogo.jpg"
-              alt="Katana"
-              width={36}
-              height={36}
-              className="h-8 w-auto"
-            />
-            <Image
-              src="/base.jpg"
-              alt="Base"
-              width={36}
-              height={36}
-              className="h-8 w-auto"
-            />
-            <Image
-              src="/StarknetLogo.png"
-              alt="Starknet"
-              width={36}
-              height={36}
-              className="h-8 w-auto"
-            />
-          </motion.div>
+          {/* Chains row - commented out */}
+          {/**
+           * <motion.div
+           *   initial={{ opacity: 0, y: 16 }}
+           *   whileInView={{ opacity: 1, y: 0 }}
+           *   viewport={{ once: true, amount: 0.3 }}
+           *   transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+           *   className="mt-6 flex items-center justify-center gap-6 opacity-80"
+           * >
+           *   <Image
+           *     src="/ETH.svg"
+           *     alt="Ethereum"
+           *     width={36}
+           *     height={36}
+           *     className="h-8 w-auto"
+           *   />
+           *   <Image
+           *     src="/KatanaLogo.jpg"
+           *     alt="Katana"
+           *     width={36}
+           *     height={36}
+           *     className="h-8 w-auto"
+           *   />
+           *   <Image
+           *     src="/base.jpg"
+           *     alt="Base"
+           *     width={36}
+           *     height={36}
+           *     className="h-8 w-auto"
+           *   />
+           *   <Image
+           *     src="/StarknetLogo.png"
+           *     alt="Starknet"
+           *     width={36}
+           *     height={36}
+           *     className="h-8 w-auto"
+           *   />
+           * </motion.div>
+           */}
         </div>
       </section>
     </>
