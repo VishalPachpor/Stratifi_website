@@ -124,30 +124,56 @@ To enable Sequel Sans Display Book:
   }
 }
 
-/* Enhanced smooth scrolling */
+/* Lenis Smooth Scrolling Styles */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Framer Motion Page Transition Styles */
+.page-transition-wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  width: 100%;
+}
+
+.layout-wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  width: 100%;
+}
+
+.content-wrapper {
+  width: 100%;
+}
+
+/* Ensure proper scrolling behavior */
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
 }
 
-/* Smooth scrolling for all elements */
-* {
-  scroll-behavior: smooth;
-}
-
-/* Optimize scrolling performance */
+/* Optimize scroll performance */
 body {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
   scroll-behavior: smooth;
-}
-
-/* Smooth scroll for specific containers */
-.smooth-scroll {
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
 }
 
 /* Prevent scroll chaining */

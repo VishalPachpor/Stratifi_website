@@ -2,10 +2,15 @@ import type React from "react";
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
-// Smooth scroll removed to fix build issues
+import LenisProvider from "@/components/providers/lenis-provider";
+import PageTransition from "@/components/animations/page-transition";
 
 // Font preloading disabled until font files are added
-const fontPreloadLinks: any[] = [];
+const fontPreloadLinks: Array<{
+  href: string;
+  as: string;
+  type: string;
+}> = [];
 
 export const metadata: Metadata = {
   title: "StratiFi - Agents for DeFi Capital",
@@ -51,7 +56,9 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="scroll-smooth scroll-optimized no-scroll-jank">
-        {children}
+        <LenisProvider>
+          <PageTransition>{children}</PageTransition>
+        </LenisProvider>
       </body>
     </html>
   );

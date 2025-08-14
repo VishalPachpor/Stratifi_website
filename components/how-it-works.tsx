@@ -56,7 +56,6 @@ export function HowItWorks() {
                     <div className="flex-shrink-0">
                       <div className="w-14 h-14 rounded-2xl bg-[#f2f2f2] flex items-center justify-center">
                         {/* icon */}
-                        {/* @ts-ignore dynamic icon */}
                         <card.icon className="w-6 h-6 text-black" />
                       </div>
                     </div>
