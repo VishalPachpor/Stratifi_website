@@ -130,17 +130,7 @@ export default function Navigation() {
 
                 {/* Menu Items */}
                 <div className="flex-1 p-6 space-y-4">
-                  <Link
-                    href="/about"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block p-4 rounded-lg hover:bg-black/5 transition-colors text-black"
-                  >
-                    <div className="text-lg font-medium mb-1">About</div>
-                    <div className="text-sm text-gray-600">
-                      Learn more about StratiFi
-                    </div>
-                  </Link>
-
+                  
                   <Link
                     href="https://demo.stratifi.xyz/agent/chat"
                     target="_blank"
