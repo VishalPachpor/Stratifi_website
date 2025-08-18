@@ -55,24 +55,31 @@ export default function Navigation() {
           <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-sm flex-shrink-0">
             <img
               src="/logo.png"
-              alt="StratiFi Logo"
+              alt="Stratifi Logo"
               className="w-full h-full object-contain"
             />
           </div>
           <span className="text-xl sm:text-2xl md:text-3xl font-medium android-text-fix">
-            StratiFi
+            Stratifi
           </span>
         </div>
 
         <div className="hidden md:flex items-center space-x-8">
-          
+          <Link
+            href="https://docs.stratifi.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-black hover:text-[#c479fe] transition-colors font-medium"
+          >
+            Docs
+          </Link>
           <Button
             asChild
             variant="default"
             className="bg-transparent border-2 border-[#c479fe] text-black hover:bg-[#c479fe]/10 cursor-pointer"
           >
             <Link
-              href="https://demo.stratifi.xyz/agent/chat"
+              href="https://demo.Stratifi.xyz/agent/chat"
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer"
@@ -130,9 +137,21 @@ export default function Navigation() {
 
                 {/* Menu Items */}
                 <div className="flex-1 p-6 space-y-4">
-                  
                   <Link
-                    href="https://demo.stratifi.xyz/agent/chat"
+                    href="https://docs.stratifi.xyz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block p-4 rounded-lg hover:bg-black/5 transition-colors text-black"
+                  >
+                    <div className="text-lg font-medium mb-1">Docs</div>
+                    <div className="text-sm text-gray-600">
+                      Stratifi documentation
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="https://demo.Stratifi.xyz/agent/chat"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -142,7 +161,7 @@ export default function Navigation() {
                       Launch Agent
                     </div>
                     <div className="text-sm text-gray-600">
-                      Start using StratiFi AI
+                      Start using Stratifi AI
                     </div>
                   </Link>
 
@@ -165,7 +184,7 @@ export default function Navigation() {
                 <div className="p-6 border-t border-black/10">
                   <div className="flex items-center space-x-4">
                     <Link
-                      href="https://x.com/stratifixyz"
+                      href="https://x.com/Stratifixyz"
                       className="p-2 rounded-lg hover:bg-black/5 transition-colors"
                     >
                       <div className="w-5 h-5 text-gray-600 hover:text-[#c479fe] transition-colors">
@@ -175,7 +194,7 @@ export default function Navigation() {
                       </div>
                     </Link>
                     <Link
-                      href="https://t.me/stratifixyz"
+                      href="https://t.me/Stratifixyz"
                       className="p-2 rounded-lg hover:bg-black/5 transition-colors"
                     >
                       <div className="w-5 h-5 text-gray-600 hover:text-[#c479fe] transition-colors">

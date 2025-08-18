@@ -13,7 +13,7 @@ const nextConfig = {
     return [
       {
         source: "/docs",
-        destination: "https://docs.stratifi.xyz/docs/intro",
+        destination: "https://docs.Stratifi.xyz/docs/intro",
         permanent: true, // 301 redirect
       },
       {

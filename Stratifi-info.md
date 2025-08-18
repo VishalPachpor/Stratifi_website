@@ -1,6 +1,5 @@
-
-StratiFi Logo
-StratiFi
+Stratifi Logo
+Stratifi
 Home
 Markets
 Hot
@@ -10,7 +9,6 @@ Intelligent
 Autonomous
 DeFAI
 Stop leaving money on the table. Our AI analyzes thousands of DeFi protocols in real-time to find the highest yields for your assets.
-
 
 Launch App
 
@@ -65,7 +63,7 @@ Optimization 3
 Auto-rebalancing complete
 Select Agent Mode
 Feature Comparison
-Feature	Research Mode	Agent Mode
+Feature Research Mode Agent Mode
 Control Level
 Full manual control
 Automated with approvals
@@ -340,8 +338,8 @@ Ready to Get Started?
 Join thousands of users who are already earning higher yields with AI-powered DeFi optimization.
 
 Start Optimizing Now
-StratiFi Logo
-StratiFi
+Stratifi Logo
+Stratifi
 Products
 Company
 Contact Us

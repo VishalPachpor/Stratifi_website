@@ -8,19 +8,19 @@ import FAQ from "@/components/faq";
 import { ContentWrapper } from "@/components/animations/page-transition";
 import Navigation from "@/components/navigation";
 
-export default function StratiFiLanding() {
+export default function StratifiLanding() {
   return (
     <div className="min-h-screen bg-white text-black relative overflow-x-hidden scroll-smooth scroll-optimized no-scroll-jank">
       <ContentWrapper>
         <HeroSection />
       </ContentWrapper>
 
-      <ContentWrapper delay={0.1}>
-        <HowItWorks />
-      </ContentWrapper>
-
       <ContentWrapper delay={0.2}>
         <APRComparison />
+      </ContentWrapper>
+
+      <ContentWrapper delay={0.1}>
+        <HowItWorks />
       </ContentWrapper>
 
       <ContentWrapper delay={0.3}>

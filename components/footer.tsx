@@ -23,39 +23,46 @@ export function Footer() {
         </div>
 
         {/* Center: Copyright */}
-        <p className="text-sm text-black/60">© 2025, Stratifi.xyz</p>
+        <p className="text-sm text-black/60">©Stratifi.xyz</p>
 
         {/* Right: Pills */}
         <div className="flex items-center gap-2 flex-wrap justify-center sm:justify-end">
           <Link
             href="#"
-            className="inline-flex items-center rounded-full border border-[#c479fe]/40 px-3 py-1 text-sm hover:bg-[#c479fe]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c479fe] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+            className="inline-flex items-center gap-2 rounded-full border border-[#c479fe]/40 px-3 py-1 text-sm hover:bg-[#c479fe]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c479fe] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
           >
-            Learn
+            <div className="w-4 h-4 text-[#c479fe]">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                <path d="M19.5 3.5L18 2l-5 5H4a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h3l5 5 1.5-1.5L19.5 3.5zM5.5 12.5V11h3l1-1-1-1h-3V7.5L3 12l2.5 4.5z" />
+              </svg>
+            </div>
+
           </Link>
           <Link
-            href="https://x.com/stratifixyz"
+            href="https://x.com/Stratifixyz"
             target="_blank"
             aria-label="Twitter"
-            className="inline-flex items-center  px-3 py-1 hover:bg-[#c479fe]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c479fe] focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-full"
+            className="inline-flex items-center gap-2 rounded-full border border-[#c479fe]/40 px-3 py-1 text-sm hover:bg-[#c479fe]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c479fe] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
           >
-            <div className="w-5 h-5 text-gray-600 hover:text-[#c479fe] transition-colors">
+            <div className="w-4 h-4 text-[#c479fe]">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
             </div>
+
           </Link>
           <Link
-            href="https://t.me/stratifixyz"
+            href="https://t.me/Stratifixyz"
             target="_blank"
             aria-label="Telegram"
-            className="inline-flex items-center  px-3 py-1 hover:bg-[#c479fe]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c479fe] focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-full"
+            className="inline-flex items-center gap-2 rounded-full border border-[#c479fe]/40 px-3 py-1 text-sm hover:bg-[#c479fe]/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c479fe] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
           >
-            <div className="w-6 h-6 text-gray-600 hover:text-[#c479fe] transition-colors">
+            <div className="w-4 h-4 text-[#c479fe]">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                 <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
               </svg>
             </div>
+
           </Link>
         </div>
       </motion.div>

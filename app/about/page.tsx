@@ -48,7 +48,7 @@ export default function AboutPage() {
               variants={itemVariants}
               className="text-4xl sm:text-5xl md:text-6xl font-light text-black mb-6"
             >
-              About StratiFi
+              About Stratifi
             </motion.h1>
             <motion.p
               variants={itemVariants}
@@ -127,7 +127,7 @@ export default function AboutPage() {
             </p>
             <button
               onClick={() => {
-                window.open("https://demo.stratifi.xyz/agent/chat", "_blank");
+                window.open("https://demo.Stratifi.xyz/agent/chat", "_blank");
               }}
               className="bg-[#c479fe] text-white font-medium px-8 py-3 rounded-full hover:bg-[#c479fe]/90 transition-colors duration-200"
             >

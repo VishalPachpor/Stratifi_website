@@ -31,18 +31,6 @@ function quantize(value: number, decimals = 2): number {
   return Math.round(value * factor) / factor;
 }
 
-const STAR_RECTS = (() => {
-  const rng = createSeededRng(42);
-  return Array.from({ length: 140 }).map(() => {
-    const angle = rng() * Math.PI * 2;
-    const radius = 360 * Math.sqrt(rng());
-    const x = quantize(500 + radius * Math.cos(angle));
-    const y = quantize(500 + radius * Math.sin(angle) * 0.56);
-    const size = quantize(rng() * 1.6 + 0.4, 2);
-    return { x, y, size };
-  });
-})();
-
 const GlobeBackground = () => (
   <svg
     viewBox="0 0 1000 1000"
@@ -88,27 +76,7 @@ const GlobeBackground = () => (
         );
       })}
     </g>
-    <g fill="hsl(var(--muted-foreground))" opacity="0.3" mask="url(#sphere)">
-      {STAR_RECTS.map((r, i) => (
-        <rect key={i} x={r.x} y={r.y} width={r.size} height={r.size} />
-      ))}
-    </g>
-    {/* removed decorative strokes */}
-    {/* replace small decorative circle with a rounded square near the top center */}
-    <rect
-      x="492"
-      y="180"
-      width="16"
-      height="16"
-      rx="3"
-      fill="hsl(var(--muted-foreground))"
-      opacity="0.35"
-    />
-    <g fill="hsl(var(--muted-foreground))" opacity="0.5">
-      <circle cx="410" cy="740" r="10" />
-      <rect x="612" y="280" width="10" height="10" rx="2" />
-      <rect x="525" y="300" width="12" height="12" rx="2" />
-    </g>
+
     <ellipse
       cx="500"
       cy="910"
@@ -190,7 +158,7 @@ const Card: React.FC<CardProps> = ({
 /* -------------------------------- section -------------------------------- */
 const APRComparison = () => {
   return (
-    <section className="relative isolate overflow-hidden bg-background py-32 md:py-40 scroll-smooth scroll-optimized no-scroll-jank">
+    <section className="relative isolate overflow-hidden bg-background pt-6 md:pt-8 pb-14 md:pb-20 scroll-smooth scroll-optimized no-scroll-jank">
       <GlobeBackground />
       <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
         <motion.h2

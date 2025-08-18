@@ -1,4 +1,4 @@
-# StratiFi Website
+# Stratifi Website
 
 A modern Next.js website with Lenis smooth scrolling and Framer Motion animations.
 

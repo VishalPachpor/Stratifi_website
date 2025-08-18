@@ -13,7 +13,7 @@ const fontPreloadLinks: Array<{
 }> = [];
 
 export const metadata: Metadata = {
-  title: "StratiFi - Agents for DeFi Capital",
+  title: "Stratifi - Agents for DeFi Capital",
   description:
     "Stratifi is your on-chain AI that hunts down the highest yield, moves your funds, and compounds your crypto—automatically.",
   generator: "v0.dev",

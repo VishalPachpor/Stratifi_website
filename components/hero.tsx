@@ -69,18 +69,6 @@ export default function HeroSection() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center w-full max-w-lg px-4"
           >
-            {/* Launch Agent Button */}
-            <button
-              type="button"
-              onClick={() => {
-                window.open("https://demo.stratifi.xyz/agent/chat", "_blank");
-              }}
-              className="w-full sm:w-auto bg-transparent border-2 border-[#c479fe] text-black font-medium text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-[#c479fe]/10 hover:scale-105 transition-all duration-200 cursor-pointer shadow-lg android-button-fix min-h-[48px]"
-            >
-              <span className="android-text-fix">Launch Agent</span>
-            </button>
-
-            {/* Join Whitelist Button */}
             <button
               type="button"
               onClick={() =>
@@ -90,6 +78,20 @@ export default function HeroSection() {
             >
               <span className="android-text-fix">Join Whitelist</span>
             </button>
+
+            
+            {/* Launch Agent Button */}
+            <button
+              type="button"
+              onClick={() => {
+                window.open("https://demo.Stratifi.xyz/agent/chat", "_blank");
+              }}
+              className="w-full sm:w-auto bg-transparent border-2 border-[#c479fe] text-black font-medium text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-[#c479fe]/10 hover:scale-105 transition-all duration-200 cursor-pointer shadow-lg android-button-fix min-h-[48px]"
+            >
+              <span className="android-text-fix">Launch Agent</span>
+            </button>
+
+            {/* Join Whitelist Button */}
           </motion.div>
           {/* Chains row - commented out */}
           {/**
