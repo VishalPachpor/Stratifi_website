@@ -119,11 +119,11 @@ export default function FAQ() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="q8" className="px-4">
+              {/* <AccordionItem value="q8" className="px-4">
                 <AccordionTrigger className="text-left text-xl md:text-2xl font-medium text-black py-6">
                   Can I control how much the AI automates?
                 </AccordionTrigger>
-                {/* <AccordionContent>
+                <AccordionContent>
                   <p className="mb-2 text-black/80 text-sm md:text-base leading-relaxed">
                     Yes. You can choose:
                   </p>
@@ -137,8 +137,8 @@ export default function FAQ() {
                       recommendations, but you confirm each move.
                     </li>
                   </ul>
-                </AccordionContent> */}
-              </AccordionItem>
+                </AccordionContent>
+              </AccordionItem> */}
             </Accordion>
           </motion.div>
         </motion.div>
