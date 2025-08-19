@@ -66,7 +66,7 @@ export default function Navigation() {
 
         <div className="hidden md:flex items-center space-x-8">
           <Link
-            href="https://docs.stratifi.xyz"
+            href="https://docs.stratifi.xyz/docs/stratifi-ai-agent/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-black hover:text-[#c479fe] transition-colors font-medium"
@@ -138,7 +138,7 @@ export default function Navigation() {
                 {/* Menu Items */}
                 <div className="flex-1 p-6 space-y-4">
                   <Link
-                    href="https://docs.stratifi.xyz"
+                    href="https://docs.stratifi.xyz/docs/stratifi-ai-agent/"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}
