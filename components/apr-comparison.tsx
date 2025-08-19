@@ -3,90 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-/* icons now loaded from /public via next/image */
-
-/* ------------------------------ globe background ------------------------------ */
-// Base meridian path (vertical ellipse segment). We rotate this around the center
-// to render evenly spaced longitudes that align like a globe.
-function meridian(cx: number, cy: number, r: number) {
-  const rx = r * 0.42; // horizontal squash ratio to simulate perspective
-  const ry = r;
-  return `M ${cx} ${cy - ry} A ${rx} ${ry} 0 0 1 ${cx} ${cy + ry}`;
-}
-
-// deterministic RNG to avoid hydration mismatches
-function createSeededRng(seed: number) {
-  let state = seed >>> 0;
-  return function rng() {
-    state = (state * 1664525 + 1013904223) >>> 0;
-    return state / 0xffffffff;
-  };
-}
-
-// Quantize floating values so Node vs Browser floating point formatting
-// cannot produce tiny rounding differences during hydration.
-function quantize(value: number, decimals = 2): number {
-  const factor = Math.pow(10, decimals);
-  return Math.round(value * factor) / factor;
-}
-
-const GlobeBackground = () => (
-  <svg
-    viewBox="0 0 1000 1000"
-    className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[900px] w-[900px] md:h-[1100px] md:w-[1100px] -translate-x-1/2 -translate-y-1/2"
-    aria-hidden
-  >
-    <defs>
-      <radialGradient id="g" cx="50%" cy="55%" r="55%">
-        <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.03" />
-        <stop offset="70%" stopColor="hsl(var(--primary))" stopOpacity="0.0" />
-      </radialGradient>
-      <mask id="sphere">
-        <circle cx="500" cy="500" r="400" fill="#fff" />
-      </mask>
-    </defs>
-    <circle cx="500" cy="500" r="400" fill="url(#g)" />
-    <g
-      mask="url(#sphere)"
-      stroke="hsl(var(--muted-foreground))"
-      strokeOpacity="0.2"
-      strokeWidth="0.8"
-    >
-      {[...Array(8)].map((_, i) => (
-        <circle
-          key={i}
-          cx="500"
-          cy="500"
-          r={85 + i * 45}
-          fill="none"
-          strokeDasharray="1 14"
-        />
-      ))}
-      {[...Array(12)].map((_, i) => {
-        const rotation = (i * 180) / 12; // distribute across 180° to avoid duplicates
-        return (
-          <path
-            key={i}
-            d={meridian(500, 500, 400)}
-            transform={`rotate(${rotation} 500 500)`}
-            fill="none"
-            strokeDasharray="1 14"
-          />
-        );
-      })}
-    </g>
-
-    <ellipse
-      cx="500"
-      cy="910"
-      rx="220"
-      ry="28"
-      fill="hsl(var(--primary))"
-      opacity="0.05"
-    />
-  </svg>
-);
+import { GlobeBackground } from "./globe-background";
 
 /* ---------------------------------- card ---------------------------------- */
 interface CardProps {
@@ -109,7 +26,7 @@ const Card: React.FC<CardProps> = ({
 }) => (
   <div
     className={[
-      "relative h-52 rounded-2xl border p-6",
+      "relative h-56 rounded-2xl border p-8",
       featured
         ? "bg-accent text-accent-foreground border-transparent shadow-[0_8px_30px_hsl(var(--accent)/0.15)]"
         : "bg-card text-card-foreground border-border",
@@ -118,7 +35,7 @@ const Card: React.FC<CardProps> = ({
     {/* Centered logo shifted slightly upward */}
     <div
       className={[
-        "absolute inset-x-0 top-6 bottom-[64px] flex items-start justify-center",
+        "absolute inset-x-0 top-8 bottom-[80px] flex items-start justify-center",
         logoWrapperClassName,
       ]
         .filter(Boolean)
@@ -129,19 +46,19 @@ const Card: React.FC<CardProps> = ({
         alt={`${name} logo`}
         width={50}
         height={50}
-        className={["h-12 w-12 md:h-14 md:w-14 object-contain", logoClassName]
+        className={["h-16 w-16 md:h-20 md:w-20 object-contain", logoClassName]
           .filter(Boolean)
           .join(" ")}
       />
     </div>
 
     {/* BOTTOM: name + APY */}
-    <div className="absolute bottom-6 left-6 right-6 text-center">
-      <div className="text-sm tracking-[0.22em]">{name}</div>
+    <div className="absolute bottom-8 left-8 right-8 text-center">
+      <div className="text-sm tracking-[0.22em] mb-2">{name}</div>
       <div
         className={
           (featured ? "text-accent-foreground" : "text-primary") +
-          " mt-1 text-lg font-medium"
+          " text-lg font-medium"
         }
       >
         {apy}
@@ -166,7 +83,7 @@ const APRComparison = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-12 text-center text-3xl font-medium tracking-tight text-black"
+          className="mb-16 text-center text-5xl font-light leading-tight tracking-tighter text-black"
         >
           Protocols
         </motion.h2>
@@ -176,7 +93,7 @@ const APRComparison = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-10"
+          className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8"
         >
           <Card name="AAVE V3" apy="3.57%" logoSrc="/aave.svg" />
           <Card name="COMPOUND" apy="6.39%" logoSrc="/compound.svg" />

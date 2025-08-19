@@ -59,7 +59,7 @@ export default function Navigation() {
               className="w-full h-full object-contain"
             />
           </div>
-          <span className="text-xl sm:text-2xl md:text-3xl font-medium android-text-fix">
+          <span className="text-xl sm:text-2xl md:text-3xl font-medium leading-tight tracking-tight-sm android-text-fix">
             Stratifi
           </span>
         </div>
@@ -69,7 +69,7 @@ export default function Navigation() {
             href="https://docs.stratifi.xyz/docs/stratifi-ai-agent/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-black hover:text-[#c479fe] transition-colors font-medium"
+            className="text-black hover:text-[#c479fe] hover:underline transition-colors font-medium"
           >
             Docs
           </Link>

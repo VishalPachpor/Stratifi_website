@@ -24,6 +24,65 @@ const config: Config = {
           "sans-serif",
         ],
       },
+      // Professional Typography Scale - Major Third (1.25 ratio)
+      fontSize: {
+        // Base scale following the 1.25 ratio theory
+        xs: ["0.75rem", { lineHeight: "1.5", letterSpacing: "0" }], // 12px
+        sm: ["0.875rem", { lineHeight: "1.5", letterSpacing: "0" }], // 14px
+        base: ["1rem", { lineHeight: "1.5", letterSpacing: "0" }], // 16px - p tag
+        lg: ["1.125rem", { lineHeight: "1.4", letterSpacing: "0" }], // 18px
+        xl: ["1.25rem", { lineHeight: "1.3", letterSpacing: "-0.005em" }], // 20px - h6
+        "2xl": ["1.5625rem", { lineHeight: "1.3", letterSpacing: "-0.01em" }], // 25px - h5
+        "3xl": [
+          "1.953125rem",
+          { lineHeight: "1.3", letterSpacing: "-0.015em" },
+        ], // 31.25px - h4
+        "4xl": [
+          "2.44140625rem",
+          { lineHeight: "1.1", letterSpacing: "-0.02em" },
+        ], // 39px - h3
+        "5xl": [
+          "3.0517578125rem",
+          { lineHeight: "1.1", letterSpacing: "-0.02em" },
+        ], // 48.8px - h2
+        "6xl": [
+          "3.814697265625rem",
+          { lineHeight: "1.0", letterSpacing: "-0.02em" },
+        ], // 61px - h1
+        "7xl": [
+          "4.76837158203125rem",
+          { lineHeight: "1.0", letterSpacing: "-0.025em" },
+        ], // 76.3px
+        "8xl": [
+          "5.9604644775390625rem",
+          { lineHeight: "1.0", letterSpacing: "-0.025em" },
+        ], // 95.4px
+        "9xl": [
+          "7.450580596923828rem",
+          { lineHeight: "1.0", letterSpacing: "-0.03em" },
+        ], // 119.2px
+      },
+      // Custom letter spacing utilities
+      letterSpacing: {
+        tightest: "-0.03em", // -3% for largest headings
+        tighter: "-0.02em", // -2% for h1, h2, h3
+        tight: "-0.015em", // -1.5% for h4
+        "tight-sm": "-0.01em", // -1% for h5
+        "tight-xs": "-0.005em", // -0.5% for h6
+        normal: "0em", // 0% for body text
+        wide: "0.01em", // +1% for emphasis
+        wider: "0.02em", // +2% for special cases
+        widest: "0.05em", // +5% for display text
+      },
+      // Custom line height utilities
+      lineHeight: {
+        none: "1", // 100% for h1
+        tight: "1.1", // 110% for h2
+        snug: "1.3", // 130% for h4
+        normal: "1.5", // 150% for body text (p)
+        relaxed: "1.625", // 162.5% for extended body
+        loose: "2", // 200% for special cases
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

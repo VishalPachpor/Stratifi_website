@@ -46,13 +46,13 @@ export default function AboutPage() {
           >
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-5xl md:text-6xl font-light text-black mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl font-light leading-none tracking-tighter text-black mb-8"
             >
               About Stratifi
             </motion.h1>
             <motion.p
               variants={itemVariants}
-              className="text-xl text-black/80 font-light leading-relaxed mb-8"
+              className="text-xl text-black/80 font-light leading-normal tracking-normal mb-12"
             >
               We&apos;re building the future of DeFi automation, one smart agent
               at a time.
@@ -71,18 +71,22 @@ export default function AboutPage() {
             className="grid grid-cols-1 md:grid-cols-2 gap-12"
           >
             {/* Mission */}
-            <motion.div variants={itemVariants} className="space-y-4">
-              <h2 className="text-2xl font-medium text-black">Our Mission</h2>
-              <p className="text-black/70 leading-relaxed">
+            <motion.div variants={itemVariants} className="space-y-6">
+              <h2 className="text-2xl font-medium leading-snug tracking-tight-sm text-black">
+                Our Mission
+              </h2>
+              <p className="text-black/70 leading-normal tracking-normal">
                 To democratize access to DeFi yields through intelligent
                 automation, making complex strategies accessible to everyone.
               </p>
             </motion.div>
 
             {/* Vision */}
-            <motion.div variants={itemVariants} className="space-y-4">
-              <h2 className="text-2xl font-medium text-black">Our Vision</h2>
-              <p className="text-black/70 leading-relaxed">
+            <motion.div variants={itemVariants} className="space-y-6">
+              <h2 className="text-2xl font-medium leading-snug tracking-tight-sm text-black">
+                Our Vision
+              </h2>
+              <p className="text-black/70 leading-normal tracking-normal">
                 A world where anyone can optimize their crypto investments
                 without needing to understand the complexities of DeFi
                 protocols.
@@ -90,20 +94,24 @@ export default function AboutPage() {
             </motion.div>
 
             {/* Technology */}
-            <motion.div variants={itemVariants} className="space-y-4">
-              <h2 className="text-2xl font-medium text-black">Technology</h2>
-              <p className="text-black/70 leading-relaxed">
+            <motion.div variants={itemVariants} className="space-y-6">
+              <h2 className="text-2xl font-medium leading-snug tracking-tight-sm text-black">
+                Technology
+              </h2>
+              <p className="text-black/70 leading-normal tracking-normal">
                 Built on cutting-edge AI and blockchain technology, our agents
                 continuously monitor and optimize your positions.
               </p>
             </motion.div>
 
             {/* Community */}
-            <motion.div variants={itemVariants} className="space-y-4">
-              <h2 className="text-2xl font-medium text-black">Community</h2>
-              <p className="text-black/70 leading-relaxed">
-                We believe in building together. Join our community of DeFi
-                enthusiasts and early adopters.
+            <motion.div variants={itemVariants} className="space-y-6">
+              <h2 className="text-2xl font-medium leading-snug tracking-tight-sm text-black">
+                Community
+              </h2>
+              <p className="text-black/70 leading-normal tracking-normal">
+                Join a community of DeFi enthusiasts and developers building the
+                future of automated finance.
               </p>
             </motion.div>
           </motion.div>

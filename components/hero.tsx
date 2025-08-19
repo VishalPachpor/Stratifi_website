@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -42,7 +40,7 @@ export default function HeroSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="text-center max-w-5xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light leading-tight mb-8"
+            className="text-center max-w-5xl text-5xl md:text-6xl font-light leading-none tracking-tighter mb-12"
           >
             Let your crypto move smarter without giving up control.
           </motion.h1>
@@ -53,7 +51,7 @@ export default function HeroSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
-            className="text-center max-w-3xl text-lg sm:text-xl md:text-2xl text-black/80 font-light leading-relaxed mb-12"
+            className="text-center max-w-3xl text-lg sm:text-xl md:text-2xl text-black/80 font-light leading-normal tracking-normal mb-16"
           >
             Talk to an on‑chain agent that hunts for better lending rates. It
             shows the plan, the fees, and only moves when you say so.
@@ -79,7 +77,6 @@ export default function HeroSection() {
               <span className="android-text-fix">Join Whitelist</span>
             </button>
 
-            
             {/* Launch Agent Button */}
             <button
               type="button"

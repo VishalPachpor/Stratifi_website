@@ -230,15 +230,87 @@ section {
   background: rgba(196, 121, 254, 0.5);
 }
 
-/* Typography improvements */
-h1,
-h2,
-h3,
-h4,
-h5,
+/* Professional Typography System - Major Third Scale */
+/* Base typography with proper hierarchy */
+h1 {
+  @apply text-6xl font-light leading-none tracking-tighter;
+}
+
+h2 {
+  @apply text-5xl font-light leading-tight tracking-tighter;
+}
+
+h3 {
+  @apply text-4xl font-light leading-tight tracking-tighter;
+}
+
+h4 {
+  @apply text-3xl font-light leading-snug tracking-tight;
+}
+
+h5 {
+  @apply text-2xl font-light leading-snug tracking-tight-sm;
+}
+
 h6 {
-  font-weight: 300;
-  letter-spacing: -0.02em;
+  @apply text-xl font-light leading-snug tracking-tight-xs;
+}
+
+p {
+  @apply text-base font-light leading-normal tracking-normal;
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 768px) {
+  h1 {
+    @apply text-5xl;
+  }
+  
+  h2 {
+    @apply text-4xl;
+  }
+  
+  h3 {
+    @apply text-3xl;
+  }
+  
+  h4 {
+    @apply text-2xl;
+  }
+  
+  h5 {
+    @apply text-xl;
+  }
+  
+  h6 {
+    @apply text-lg;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    @apply text-4xl;
+  }
+  
+  h2 {
+    @apply text-3xl;
+  }
+  
+  h3 {
+    @apply text-2xl;
+  }
+  
+  h4 {
+    @apply text-xl;
+  }
+  
+  h5 {
+    @apply text-lg;
+  }
+  
+  h6 {
+    @apply text-base;
+  }
 }
 
 /* Button hover effects */
