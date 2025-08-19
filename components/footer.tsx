@@ -23,7 +23,6 @@ export function Footer() {
         </div>
 
         {/* Center: Copyright */}
-        <p className="text-sm text-black/60">©Stratifi.xyz</p>
 
         {/* Right: Pills */}
         <div className="flex items-center gap-2 flex-wrap justify-center sm:justify-end">

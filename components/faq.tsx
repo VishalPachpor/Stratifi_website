@@ -40,7 +40,7 @@ export default function FAQ() {
               className="w-full divide-y  rounded-2xl"
             >
               <AccordionItem value="q2" className="px-6">
-                <AccordionTrigger className="text-left font-medium text-black py-6 text-lg md:text-xl">
+                <AccordionTrigger className="text-left font-light text-black py-6 text-lg md:text-xl">
                   Can I use Stratifi AI Agent if I&apos;m new to crypto or
                   don&apos;t have a wallet?
                 </AccordionTrigger>
@@ -55,7 +55,7 @@ export default function FAQ() {
               </AccordionItem>
 
               <AccordionItem value="q3" className="px-6">
-                <AccordionTrigger className="text-left font-medium text-black py-6 text-lg md:text-xl">
+                <AccordionTrigger className="text-left font-light text-black py-6 text-lg md:text-xl">
                   How is the yield (APY) generated?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -71,7 +71,7 @@ export default function FAQ() {
               </AccordionItem>
 
               <AccordionItem value="q5" className="px-6">
-                <AccordionTrigger className="text-left font-medium text-black py-6 text-lg md:text-xl">
+                <AccordionTrigger className="text-left font-light text-black py-6 text-lg md:text-xl">
                   What does Stratifi do to mitigate risks?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -93,7 +93,7 @@ export default function FAQ() {
               </AccordionItem>
 
               <AccordionItem value="q6" className="px-6">
-                <AccordionTrigger className="text-left font-medium text-black py-6 text-lg md:text-xl">
+                <AccordionTrigger className="text-left font-light text-black py-6 text-lg md:text-xl">
                   Is the yield fixed or variable?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -105,7 +105,7 @@ export default function FAQ() {
               </AccordionItem>
 
               <AccordionItem value="q7" className="px-6">
-                <AccordionTrigger className="text-left font-medium text-black py-6 text-lg md:text-xl">
+                <AccordionTrigger className="text-left font-light text-black py-6 text-lg md:text-xl">
                   Are there fees for using Stratifi AI Agent?
                 </AccordionTrigger>
                 <AccordionContent>

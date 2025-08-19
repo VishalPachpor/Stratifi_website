@@ -72,7 +72,7 @@ export default function AboutPage() {
           >
             {/* Mission */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <h2 className="text-2xl font-medium leading-snug tracking-tight-sm text-black">
+              <h2 className="text-2xl font-light leading-snug tracking-tight-sm text-black">
                 Our Mission
               </h2>
               <p className="text-black/70 leading-normal tracking-normal">
@@ -83,7 +83,7 @@ export default function AboutPage() {
 
             {/* Vision */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <h2 className="text-2xl font-medium leading-snug tracking-tight-sm text-black">
+              <h2 className="text-2xl font-light leading-snug tracking-tight-sm text-black">
                 Our Vision
               </h2>
               <p className="text-black/70 leading-normal tracking-normal">
@@ -95,7 +95,7 @@ export default function AboutPage() {
 
             {/* Technology */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <h2 className="text-2xl font-medium leading-snug tracking-tight-sm text-black">
+              <h2 className="text-2xl font-light leading-snug tracking-tight-sm text-black">
                 Technology
               </h2>
               <p className="text-black/70 leading-normal tracking-normal">
@@ -106,7 +106,7 @@ export default function AboutPage() {
 
             {/* Community */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <h2 className="text-2xl font-medium leading-snug tracking-tight-sm text-black">
+              <h2 className="text-2xl font-light leading-snug tracking-tight-sm text-black">
                 Community
               </h2>
               <p className="text-black/70 leading-normal tracking-normal">
@@ -127,7 +127,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="max-w-2xl mx-auto text-center"
           >
-            <h2 className="text-3xl font-medium text-black mb-6">
+            <h2 className="text-3xl font-light text-black mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-black/70 mb-8">

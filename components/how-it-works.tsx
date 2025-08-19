@@ -60,7 +60,7 @@ export function HowItWorks() {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl leading-snug tracking-tight-sm font-medium text-black whitespace-pre-line mb-4">
+                      <h3 className="text-2xl leading-snug tracking-tight-sm font-light text-black whitespace-pre-line mb-4">
                         {card.title}
                       </h3>
                       <p className="text-black/70 leading-normal tracking-normal">
