@@ -50,7 +50,7 @@ export default function Navigation() {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="absolute md:fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-4 sm:px-8 py-3 sm:py-3 bg-white/50 backdrop-blur-md supports-[backdrop-filter]:bg-white/35 border-b border-black/5">
+      <nav className="absolute md:fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-4 sm:px-8 py-3 sm:py-3 bg-transparent border-b border-black/5">
         <div className="flex items-center space-x-3">
           <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-sm flex-shrink-0">
             <img

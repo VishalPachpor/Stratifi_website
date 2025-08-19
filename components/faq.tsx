@@ -40,26 +40,7 @@ export default function FAQ() {
               collapsible
               className="w-full divide-y  rounded-2xl"
             >
-              <AccordionItem value="q1" className="px-4">
-                <AccordionTrigger className="text-left text-xl md:text-2xl font-medium text-black py-6">
-                  What is Stratifi AI Agent, and how is it different from a
-                  traditional savings account?
-                </AccordionTrigger>
-                <AccordionContent>
-                  <p className="text-black/80 text-sm md:text-base leading-relaxed">
-                    Stratifi AI Agent is your smart assistant for DeFi yield
-                    optimization. Instead of parking funds in a single account,
-                    it actively scans multiple money market protocols like
-                    Morpho, Compound, Moonwell, and Seamless to find the best
-                    yield based on your risk preferences. You can choose to let
-                    the agent run fully autonomously or just get research
-                    suggestions before making decisions. Your funds remain in
-                    your non-custodial smart account, with no lock-ups and the
-                    ability to withdraw anytime.
-                  </p>
-                </AccordionContent>
-              </AccordionItem>
-
+              
               <AccordionItem value="q2" className="px-4">
                 <AccordionTrigger className="text-left text-xl md:text-2xl font-medium text-black py-6">
                   Can I use Stratifi AI Agent if I’m new to crypto or don’t have
@@ -91,22 +72,6 @@ export default function FAQ() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="q4" className="px-4">
-                <AccordionTrigger className="text-left text-xl md:text-2xl font-medium text-black py-6">
-                  Why can these returns be higher than what banks offer?
-                </AccordionTrigger>
-                <AccordionContent>
-                  <p className="text-black/80 text-sm md:text-base leading-relaxed">
-                    In traditional banking, middlemen take a large cut between
-                    what borrowers pay and what depositors earn. DeFi removes
-                    those intermediaries, meaning more yield flows directly to
-                    you. On top of that, some protocols offer short-term rewards
-                    to attract liquidity, which Stratifi can capture for you
-                    while keeping positions balanced and secure.
-                  </p>
-                </AccordionContent>
-              </AccordionItem>
-
               <AccordionItem value="q5" className="px-4">
                 <AccordionTrigger className="text-left text-xl md:text-2xl font-medium text-black py-6">
                   What does Stratifi do to mitigate risks?
@@ -119,18 +84,11 @@ export default function FAQ() {
                       your assets
                     </li>
                     <li>
-                      Employs a validator service to approve all agent actions
-                    </li>
-                    <li>
                       Monitors multiple price feeds and key metrics (liquidity
                       shifts, whale movements, rate changes)
                     </li>
                     <li>
                       Auto-rotates out of risky pools if warning signs appear
-                    </li>
-                    <li>
-                      Supports primarily stablecoins and major assets to reduce
-                      volatility risk
                     </li>
                   </ul>
                 </AccordionContent>
@@ -165,7 +123,7 @@ export default function FAQ() {
                 <AccordionTrigger className="text-left text-xl md:text-2xl font-medium text-black py-6">
                   Can I control how much the AI automates?
                 </AccordionTrigger>
-                <AccordionContent>
+                {/* <AccordionContent>
                   <p className="mb-2 text-black/80 text-sm md:text-base leading-relaxed">
                     Yes. You can choose:
                   </p>
@@ -179,7 +137,7 @@ export default function FAQ() {
                       recommendations, but you confirm each move.
                     </li>
                   </ul>
-                </AccordionContent>
+                </AccordionContent> */}
               </AccordionItem>
             </Accordion>
           </motion.div>
