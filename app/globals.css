@@ -353,79 +353,27 @@ canvas {
   isolation: isolate;
 }
 
-  /* Halftone spotlight background effect */
+  /* Halftone spotlight background effect - DEPRECATED: Replaced with particles */
+  /* 
   .halftone-spotlight {
-    /* Tunable variables */
-    --halftone-color: var(--primary); /* use theme primary by default */
+    --halftone-color: var(--primary);
     --dot-size: 8px;
-
     position: absolute;
     border-radius: 9999px;
     pointer-events: none;
-    /* Two-layer background: a soft radial glow and a dot grid */
     background-image:
       radial-gradient(circle at 60% 40%, hsl(var(--halftone-color) / 0.6) 0%, hsl(var(--halftone-color) / 0.35) 35%, transparent 60%),
       radial-gradient(hsl(var(--halftone-color) / 0.9) 1px, transparent 1px);
     background-size: 100% 100%, var(--dot-size) var(--dot-size);
     background-position: center, center;
     background-repeat: no-repeat, repeat;
-    /* Mask to shape the dots into a big soft circle with feathered edge */
     -webkit-mask-image: radial-gradient(circle at 60% 40%, #000 0%, #000 55%, transparent 72%);
     mask-image: radial-gradient(circle at 60% 40%, #000 0%, #000 55%, transparent 72%);
     opacity: 0.6;
     filter: saturate(110%) contrast(105%);
-    mix-blend-mode: multiply; /* better on light backgrounds */
+    mix-blend-mode: multiply;
   }
-
-  /* Brand variant using theme purple */
-  .halftone-spotlight--brand {
-    --dot-size: 12px;
-    --halftone-color: var(--primary);
-    background-image:
-      radial-gradient(circle at 62% 38%, hsl(var(--halftone-color) / 0.65) 0%, hsl(var(--halftone-color) / 0.45) 35%, transparent 62%),
-      radial-gradient(hsl(var(--halftone-color) / 0.95) 1.1px, transparent 1.1px),
-      radial-gradient(hsl(var(--halftone-color) / 0.95) 1.1px, transparent 1.1px);
-    background-size: 100% 100%, var(--dot-size) var(--dot-size), var(--dot-size) var(--dot-size);
-    background-position: center, 0 0, calc(var(--dot-size) / 2) calc(var(--dot-size) / 2);
-    background-repeat: no-repeat, repeat, repeat;
-    -webkit-mask-image: radial-gradient(circle at 62% 38%, #000 0%, #000 55%, transparent 72%);
-    mask-image: radial-gradient(circle at 62% 38%, #000 0%, #000 55%, transparent 72%);
-    opacity: 0.95;
-    filter: saturate(115%) contrast(115%);
-  }
-
-  /* Exact-theme variant: vibrant green halftone like the reference */
-  .halftone-spotlight--arma {
-    --dot-size: 12px;
-    background-image:
-      radial-gradient(circle at 62% 38%, rgba(179, 255, 90, 0.70) 0%, rgba(179, 255, 90, 0.50) 35%, transparent 62%),
-      radial-gradient(rgba(179, 255, 90, 0.95) 1.1px, transparent 1.1px),
-      radial-gradient(rgba(179, 255, 90, 0.95) 1.1px, transparent 1.1px);
-    background-size: 100% 100%, var(--dot-size) var(--dot-size), var(--dot-size) var(--dot-size);
-    background-position: center, 0 0, calc(var(--dot-size) / 2) calc(var(--dot-size) / 2);
-    background-repeat: no-repeat, repeat, repeat;
-    -webkit-mask-image: radial-gradient(circle at 62% 38%, #000 0%, #000 55%, transparent 72%);
-    mask-image: radial-gradient(circle at 62% 38%, #000 0%, #000 55%, transparent 72%);
-    opacity: 0.95;
-    filter: saturate(120%) contrast(118%);
-  }
-
-  @media (max-width: 768px) {
-    .halftone-spotlight--arma {
-      --dot-size: 14px;
-      opacity: 0.85;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .halftone-spotlight { --dot-size: 10px; opacity: 0.75; }
-    .hero-bg { transform: translateZ(0); }
-    .hero-bg .halftone-spotlight {
-      -webkit-mask-image: radial-gradient(circle at 50% 30%, #000 0%, #000 50%, transparent 70%);
-      mask-image: radial-gradient(circle at 50% 30%, #000 0%, #000 50%, transparent 70%);
-      mix-blend-mode: screen;
-    }
-  }
+  */
 
 /* Android-specific text fixes */
 .android-text-fix {
@@ -581,32 +529,8 @@ canvas {
   }
 }
 
-/* Mobile 3D Globe positioning fixes */
-@media (max-width: 768px) {
-  /* Better mobile globe positioning */
-  .hero-section .absolute[class*="pointer-events-none"] {
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) translateZ(0) !important;
-    top: 12% !important;
-  }
-}
-
-/* Extra small screens */
-@media (max-width: 480px) {
-  .hero-section .absolute[class*="pointer-events-none"] {
-    top: 8% !important;
-    transform: translateX(-50%) translateZ(0) scale(0.9) !important;
-  }
-}
-
-/* Landscape mobile orientation */
-@media (max-width: 768px) and (orientation: landscape) {
-  .hero-section .absolute[class*="pointer-events-none"] {
-    top: 5% !important;
-    transform: translateX(-50%) translateZ(0) scale(0.8) !important;
-  }
-}
+/* Mobile 3D Globe positioning fixes - DEPRECATED: Replaced with particles */
+/* Globe positioning styles removed - no longer needed with particles background */
 
 /* Enhanced scroll performance utilities */
 .scroll-smooth {
@@ -661,4 +585,34 @@ canvas {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
+}
+
+/* Particles Background Styles */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Ensure particles canvas doesn't break layout */
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Particle count display styling */
+.particle-count {
+  background: rgba(255, 255, 255, 0.9);
+  color: #c479fe;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.375rem;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(196, 121, 254, 0.35);
 }

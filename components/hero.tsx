@@ -1,34 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useIsMobile } from "@/hooks/use-mobile";
+import ParticlesBackground from "./ParticlesBackground";
 
 export default function HeroSection() {
-  const isMobile = useIsMobile();
-
   return (
     <>
       <section className="hero-section relative w-full min-h-screen bg-white text-black overflow-hidden pt-20 sm:pt-24 md:pt-28 md:scroll-mt-28 scroll-smooth scroll-optimized no-scroll-jank">
-        {/* Background Effects */}
-        <div className="hero-bg absolute inset-0 pointer-events-none">
-          <div className="absolute inset-0" />
-          {/* Halftone spotlight inspired by Arma */}
-          <div
-            aria-hidden
-            className="halftone-spotlight halftone-spotlight--brand"
-            style={{
-              width: isMobile
-                ? "clamp(320px, 110vw, 560px)"
-                : "clamp(640px, 72vw, 940px)",
-              height: isMobile
-                ? "clamp(320px, 110vw, 560px)"
-                : "clamp(640px, 72vw, 940px)",
-              left: "50%",
-              top: isMobile ? "0%" : "-6%",
-              transform: "translateX(-50%)",
-            }}
-          />
-        </div>
+        {/* Particles Background */}
+        <ParticlesBackground />
 
         {/* Main Content */}
         <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-6rem)] px-4 py-8 sm:py-12 md:py-20">
@@ -90,45 +70,6 @@ export default function HeroSection() {
 
             {/* Join Whitelist Button */}
           </motion.div>
-          {/* Chains row - commented out */}
-          {/**
-           * <motion.div
-           *   initial={{ opacity: 0, y: 16 }}
-           *   whileInView={{ opacity: 1, y: 0 }}
-           *   viewport={{ once: true, amount: 0.3 }}
-           *   transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
-           *   className="mt-6 flex items-center justify-center gap-6 opacity-80"
-           * >
-           *   <Image
-           *     src="/ETH.svg"
-           *     alt="Ethereum"
-           *     width={36}
-           *     height={36}
-           *     className="h-8 w-auto"
-           *   />
-           *   <Image
-           *     src="/KatanaLogo.jpg"
-           *     alt="Katana"
-           *     width={36}
-           *     height={36}
-           *     className="h-8 w-auto"
-           *   />
-           *   <Image
-           *     src="/base.jpg"
-           *     alt="Base"
-           *     width={36}
-           *     height={36}
-           *     className="h-8 w-auto"
-           *   />
-           *   <Image
-           *     src="/StarknetLogo.png"
-           *     alt="Starknet"
-           *     width={36}
-           *     height={36}
-           *     className="h-8 w-auto"
-           *   />
-           * </motion.div>
-           */}
         </div>
       </section>
     </>
