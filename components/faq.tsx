@@ -112,7 +112,7 @@ export default function FAQ() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <p className="text-black/80 text-sm md:text-base leading-relaxed">
-                    Stratifi charges a <strong>10% performance fee</strong>
+                    Stratifi charges a <strong>15% performance fee</strong>
                     —only on yield earned, never on your principal. No deposit
                     or withdrawal fees.
                   </p>
