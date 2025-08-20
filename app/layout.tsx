@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   title: "Stratifi - Agents for DeFi Capital",
   description:
     "Stratifi is your on-chain AI that hunts down the highest yield, moves your funds, and compounds your crypto—automatically.",
-  generator: "v0.dev",
+  generator: "next.js",
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/new-logo.svg",
+    shortcut: "/new-logo.svg",
+    apple: "/new-logo.svg",
   },
 };
 
