@@ -55,7 +55,10 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className="scroll-smooth scroll-optimized no-scroll-jank">
+      <body
+        className="scroll-smooth scroll-optimized no-scroll-jank"
+        suppressHydrationWarning={true}
+      >
         <LenisProvider>
           <PageTransition>{children}</PageTransition>
         </LenisProvider>

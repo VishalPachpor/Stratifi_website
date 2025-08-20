@@ -21,7 +21,7 @@ export function UserSegments() {
         "Intelligent agents optimize continuously, driving consistent volume; semantic abstraction simplifies integration and broadens cross-chain and demographic access through intuitive agent interfaces.",
     },
     {
-      title: "FOR DEVELOPERS",
+      title: "FOR DEGENS",
       description:
         "Stratifi enables seamless creation and integration of agent swarms via SDKs, empowering developers to launch autonomous, risk-aware strategy agents tailored to their ecosystem.",
     },
