@@ -135,7 +135,7 @@ export default function AboutPage() {
             </p>
             <button
               onClick={() => {
-                window.open("https://demo.Stratifi.xyz/agent/chat", "_blank");
+                window.open("https://demo.Stratifi.xyz", "_blank");
               }}
               className="bg-[#c479fe] text-white font-medium px-8 py-3 rounded-full hover:bg-[#c479fe]/90 transition-colors duration-200"
             >
