@@ -3,6 +3,7 @@
 import HeroSection from "@/components/hero";
 import { HowItWorks } from "@/components/how-it-works";
 import APRComparison from "@/components/apr-comparison";
+import { UserSegments } from "@/components/user-segments";
 import { Footer } from "@/components/footer";
 import FAQ from "@/components/faq";
 import { ContentWrapper } from "@/components/animations/page-transition";
@@ -21,6 +22,10 @@ export default function StratifiLanding() {
 
       <ContentWrapper delay={0.1}>
         <HowItWorks />
+      </ContentWrapper>
+
+      <ContentWrapper delay={0.2}>
+        <UserSegments />
       </ContentWrapper>
 
       <ContentWrapper delay={0.3}>

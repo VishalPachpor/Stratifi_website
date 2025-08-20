@@ -62,7 +62,7 @@ export default function Navigation() {
               className="w-full h-full object-contain"
             />
           </div>
-          <span className="text-xl sm:text-2xl md:text-3xl font-light leading-tight tracking-tight-sm android-text-fix">
+          <span className="text-lg sm:text-xl md:text-2xl font-light leading-tight tracking-tight-sm android-text-fix">
             Stratifi
           </span>
         </div>
@@ -82,7 +82,7 @@ export default function Navigation() {
             className="bg-transparent border-2 border-[#c479fe] text-black hover:bg-[#c479fe]/10 cursor-pointer"
           >
             <Link
-              href="https://demo.Stratifi.xyz/agent/chat"
+              href="https://demo.Stratifi.xyz"
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer"
@@ -154,7 +154,7 @@ export default function Navigation() {
                   </Link>
 
                   <Link
-                    href="https://demo.Stratifi.xyz/agent/chat"
+                    href="https://demo.Stratifi.xyz/"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}

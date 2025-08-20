@@ -20,7 +20,7 @@ export default function HeroSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="text-center max-w-5xl text-5xl md:text-6xl font-light leading-none tracking-tighter mb-12"
+            className="text-center max-w-5xl text-4xl md:text-5xl font-light leading-none tracking-tighter mb-12"
           >
             Let your crypto move smarter without giving up control.
           </motion.h1>
@@ -31,7 +31,7 @@ export default function HeroSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
-            className="text-center max-w-3xl text-lg sm:text-xl md:text-2xl text-black/80 font-light leading-normal tracking-normal mb-16"
+            className="text-center max-w-3xl text-base sm:text-lg md:text-xl text-black/80 font-light leading-normal tracking-normal mb-16"
           >
             Talk to an on‑chain agent that hunts for better lending rates. It
             shows the plan, the fees, and only moves when you say so.
@@ -52,7 +52,7 @@ export default function HeroSection() {
               onClick={() =>
                 window.open("https://app.youform.com/forms/bbbn2d9r", "_blank")
               }
-              className="w-full sm:w-auto bg-transparent border-2 border-[#c479fe] text-black font-medium text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-[#c479fe]/10 hover:scale-105 transition-all duration-200 cursor-pointer shadow-lg android-button-fix min-h-[48px]"
+              className="w-full sm:w-auto bg-transparent border-2 border-[#c479fe] text-black font-medium text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-[#c479fe]/10 hover:scale-105 transition-all duration-200 cursor-pointer shadow-lg android-button-fix min-h-[48px]"
             >
               <span className="android-text-fix">Join Whitelist</span>
             </button>
@@ -63,7 +63,7 @@ export default function HeroSection() {
               onClick={() => {
                 window.open("https://demo.Stratifi.xyz/agent/chat", "_blank");
               }}
-              className="w-full sm:w-auto bg-transparent border-2 border-[#c479fe] text-black font-medium text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-[#c479fe]/10 hover:scale-105 transition-all duration-200 cursor-pointer shadow-lg android-button-fix min-h-[48px]"
+              className="w-full sm:w-auto bg-transparent border-2 border-[#c479fe] text-black font-medium text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-[#c479fe]/10 hover:scale-105 transition-all duration-200 cursor-pointer shadow-lg android-button-fix min-h-[48px]"
             >
               <span className="android-text-fix">Launch Agent</span>
             </button>

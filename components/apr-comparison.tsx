@@ -83,10 +83,19 @@ const APRComparison = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-16 text-center text-5xl font-light leading-tight tracking-tighter text-black"
+          className="mb-4 text-center text-4xl font-light leading-tight tracking-tighter text-black"
         >
           Protocols
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="mb-16 text-center text-lg text-black/70 font-light leading-normal tracking-normal"
+        >
+          40+ Protocol Markets
+        </motion.p>
         {/* strict single row with visible gaps */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -106,6 +115,208 @@ const APRComparison = () => {
             logoWrapperClassName="top-[10px]"
           />
           <Card name="SEAMLESS" apy="9.13%" logoSrc="/seamless.svg" />
+        </motion.div>
+
+        {/* Chains Support Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          className="mt-20 text-center"
+        >
+          <motion.h3
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+            className="text-2xl md:text-3xl font-light leading-tight tracking-tighter text-black mb-8"
+          >
+            Stratifi supports a growing list of over 10+ chains
+          </motion.h3>
+
+          {/* Chains Carousel */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll space-x-8 md:space-x-12">
+              {/* First set of chains */}
+              <div className="flex items-center space-x-8 md:space-x-12 flex-shrink-0">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                    <Image
+                      src="/chains/Eth.png"
+                      alt="Ethereum"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6"
+                    />
+                  </div>
+                  <span className="text-sm text-black/70 font-light">
+                    Ethereum
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                    <Image
+                      src="/chains/Base.jpg"
+                      alt="Base"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 object-cover"
+                    />
+                  </div>
+                  <span className="text-sm text-black/70 font-light">Base</span>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                    <Image
+                      src="/chains/Starknet.png"
+                      alt="Starknet"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6"
+                    />
+                  </div>
+                  <span className="text-sm text-black/70 font-light">
+                    Starknet
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm overflow-hidden">
+                    <Image
+                      src="/chains/Katana.jpg"
+                      alt="Katana"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 object-cover"
+                    />
+                  </div>
+                  <span className="text-sm text-black/70 font-light">
+                    Katana
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                    <Image
+                      src="/chains/FuelWhite.svg"
+                      alt="Fuel"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6"
+                    />
+                  </div>
+                  <span className="text-sm text-black/70 font-light">Fuel</span>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                    <Image
+                      src="/chains/ArbitrumWhite.svg"
+                      alt="Arbitrum"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6"
+                    />
+                  </div>
+                  <span className="text-sm text-black/70 font-light">
+                    Arbitrum
+                  </span>
+                </div>
+              </div>
+
+              {/* Duplicate set for seamless loop */}
+              <div className="flex items-center space-x-8 md:space-x-12 flex-shrink-0">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                    <Image
+                      src="/chains/Eth.png"
+                      alt="Ethereum"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6"
+                    />
+                  </div>
+                  <span className="text-sm text-black/70 font-light">
+                    Ethereum
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                    <Image
+                      src="/chains/Base.jpg"
+                      alt="Base"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 object-cover"
+                    />
+                  </div>
+                  <span className="text-sm text-black/70 font-light">Base</span>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                    <Image
+                      src="/chains/Starknet.png"
+                      alt="Starknet"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6"
+                    />
+                  </div>
+                  <span className="text-sm text-black/70 font-light">
+                    Starknet
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm overflow-hidden">
+                    <Image
+                      src="/chains/Katana.jpg"
+                      alt="Katana"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 object-cover"
+                    />
+                  </div>
+                  <span className="text-sm text-black/70 font-light">
+                    Katana
+                  </span>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                    <Image
+                      src="/chains/FuelWhite.svg"
+                      alt="Fuel"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6"
+                    />
+                  </div>
+                  <span className="text-sm text-black/70 font-light">Fuel</span>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                    <Image
+                      src="/chains/ArbitrumWhite.svg"
+                      alt="Arbitrum"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6"
+                    />
+                  </div>
+                  <span className="text-sm text-black/70 font-light">
+                    Arbitrum
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -616,3 +616,21 @@ canvas {
   backdrop-filter: blur(8px);
   border: 1px solid rgba(196, 121, 254, 0.35);
 }
+
+/* Chains Carousel Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
