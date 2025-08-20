@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import NotchedCard from "./NotchedCard";
 
 export function UserSegments() {
   const segments = [
@@ -40,12 +41,12 @@ export function UserSegments() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
-            className="text-2xl md:text-3xl font-light leading-tight tracking-tighter text-center mb-8"
+            className="text-2xl md:text-3xl font-light leading-tight tracking-tighter text-center mb-8 text-black"
           >
             Built for Every User
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {segments.map((segment, index) => (
               <motion.div
                 key={index}
@@ -53,21 +54,10 @@ export function UserSegments() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative rounded-t-xl bg-white border border-black/10 hover:border-[#c479fe]/30 transition-all duration-300 hover:bg-[#fafafa] group shadow-sm"
               >
-                <div className="p-4 h-full flex flex-col">
-                  <h3 className="text-sm font-medium text-black mb-3 tracking-wide uppercase">
-                    {segment.title}
-                  </h3>
-                  <p className="text-xs text-black/70 leading-relaxed flex-1">
-                    {segment.description}
-                  </p>
-                </div>
-
-                {/* Subtle glow effect on hover */}
-                <div className="absolute inset-0 rounded-t-xl bg-gradient-to-b from-transparent via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c479fe]/50 to-transparent"></div>
-                </div>
+                <NotchedCard title={segment.title}>
+                  {segment.description}
+                </NotchedCard>
               </motion.div>
             ))}
           </div>

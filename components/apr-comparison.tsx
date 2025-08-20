@@ -132,7 +132,7 @@ const APRComparison = () => {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
             className="text-2xl md:text-3xl font-light leading-tight tracking-tighter text-black mb-8"
           >
-            Stratifi supports a growing list of over 10+ chains
+            Stratifi supports a growing list of 10+ chains
           </motion.h3>
 
           {/* Chains Carousel */}
