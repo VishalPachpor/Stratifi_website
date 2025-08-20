@@ -102,19 +102,30 @@ const APRComparison = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-          className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8"
+          className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6 lg:gap-8"
         >
-          <Card name="AAVE V3" apy="3.57%" logoSrc="/aave.svg" />
-          <Card name="COMPOUND" apy="6.39%" logoSrc="/compound.svg" />
-          <Card name="MORPHO BLUE" apy="7.67%" logoSrc="/morpho.jpg" />
+          <Card name="AAVE V3" apy="5.78%" logoSrc="/aave.svg" />
+          <Card name="COMPOUND" apy="9.36%" logoSrc="/compound.svg" />
+          <Card name="MORPHO BLUE" apy="11.35%" logoSrc="/morpho.jpg" />
           <Card
             name="MOONWELL"
-            apy="7.48%"
+            apy="9.46%"
             logoSrc="/moonwell.svg"
             logoClassName="h-16 w-16 md:h-20 md:w-20 object-top"
-            logoWrapperClassName="top-[10px]"
+            logoWrapperClassName="top-[25px]"
           />
-          <Card name="SEAMLESS" apy="9.13%" logoSrc="/seamless.svg" />
+          <Card
+            name="SEAMLESS"
+            apy="9.13%"
+            logoSrc="/seamless.svg"
+            logoWrapperClassName="top-[20px]"
+          />
+          <Card
+            name="WASABI"
+            apy="10.17%"
+            logoSrc="/wasabi.svg"
+            logoClassName="h-12 w-12 md:h-16 md:w-16"
+          />
         </motion.div>
 
         {/* Chains Support Section */}
@@ -201,14 +212,14 @@ const APRComparison = () => {
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
                     <Image
-                      src="/chains/FuelWhite.svg"
-                      alt="Fuel"
+                      src="/chains/near.png"
+                      alt="NEAR"
                       width={24}
                       height={24}
                       className="w-6 h-6"
                     />
                   </div>
-                  <span className="text-sm text-black/70 font-light">Fuel</span>
+                  <span className="text-sm text-black/70 font-light">NEAR</span>
                 </div>
 
                 <div className="flex items-center space-x-3">
@@ -290,14 +301,14 @@ const APRComparison = () => {
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
                     <Image
-                      src="/chains/FuelWhite.svg"
-                      alt="Fuel"
+                      src="/chains/near.png"
+                      alt="NEAR"
                       width={24}
                       height={24}
                       className="w-6 h-6"
                     />
                   </div>
-                  <span className="text-sm text-black/70 font-light">Fuel</span>
+                  <span className="text-sm text-black/70 font-light">NEAR</span>
                 </div>
 
                 <div className="flex items-center space-x-3">

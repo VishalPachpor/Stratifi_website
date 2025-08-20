@@ -4,6 +4,9 @@ import HeroSection from "@/components/hero";
 import { HowItWorks } from "@/components/how-it-works";
 import APRComparison from "@/components/apr-comparison";
 import { UserSegments } from "@/components/user-segments";
+import { Partners } from "@/components/partners";
+import { Testimonials } from "@/components/testimonials";
+import { BackedBy } from "@/components/backed-by";
 import { Footer } from "@/components/footer";
 import FAQ from "@/components/faq";
 import { ContentWrapper } from "@/components/animations/page-transition";
@@ -29,6 +32,18 @@ export default function StratifiLanding() {
       </ContentWrapper>
 
       <ContentWrapper delay={0.3}>
+        <Partners />
+      </ContentWrapper>
+
+      <ContentWrapper delay={0.4}>
+        <Testimonials />
+      </ContentWrapper>
+
+      <ContentWrapper delay={0.5}>
+        <BackedBy />
+      </ContentWrapper>
+
+      <ContentWrapper delay={0.6}>
         <FAQ />
       </ContentWrapper>
 
@@ -37,7 +52,7 @@ export default function StratifiLanding() {
 
       {/* Main Content */}
       <main className="relative z-10">
-        <ContentWrapper delay={0.4}>
+        <ContentWrapper delay={0.7}>
           <Footer />
         </ContentWrapper>
       </main>
