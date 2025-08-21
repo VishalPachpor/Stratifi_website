@@ -23,7 +23,7 @@ export function UserSegments() {
     {
       title: "FOR DEGENS",
       description:
-        "Stratifi enables seamless creation and integration of agent swarms via SDKs, empowering developers to launch autonomous, risk-aware strategy agents tailored to their ecosystem.",
+        "Stratifi&;s AI agent swarms are your DeFi wingman, auto-trading with risk-smart strategies to chase alpha. No dev skills needed—plug in, let them grind arbitrage or yields, and stack bags while you HODL. Moon time!",
     },
   ];
 
