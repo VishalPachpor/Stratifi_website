@@ -19,7 +19,7 @@ export function Partners() {
     },
     {
       name: "The Graph",
-      logoSrc: "/partners/Graphl.png",
+      logoSrc: "/partners/graphl.png",
       width: 120,
       height: 40,
     },
