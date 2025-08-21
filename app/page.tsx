@@ -11,6 +11,7 @@ import { Footer } from "@/components/footer";
 import FAQ from "@/components/faq";
 import { ContentWrapper } from "@/components/animations/page-transition";
 import Navigation from "@/components/navigation";
+import { ArticleSection } from "@/components/article-section";
 
 export default function StratifiLanding() {
   return (
@@ -44,6 +45,10 @@ export default function StratifiLanding() {
       </ContentWrapper>
 
       <ContentWrapper delay={0.6}>
+        <ArticleSection />
+      </ContentWrapper>
+
+      <ContentWrapper delay={0.7}>
         <FAQ />
       </ContentWrapper>
 
