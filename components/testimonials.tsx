@@ -43,20 +43,20 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-white font-light text-black antialiased py-20 scroll-smooth scroll-optimized no-scroll-jank">
+    <section className="relative w-full overflow-hidden bg-white font-light text-black antialiased py-12 sm:py-16 md:py-20 lg:py-24 scroll-smooth scroll-optimized no-scroll-jank">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-white"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-b from-[#c479fe]/10 to-transparent blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] md:w-[600px] md:h-[600px] rounded-full bg-gradient-to-b from-[#c479fe]/10 to-transparent blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-        <div className="mb-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div className="mb-12 sm:mb-16 md:mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl md:text-4xl font-light leading-tight tracking-tighter text-center mb-8 text-black"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight tracking-tighter text-center mb-6 sm:mb-8 text-black"
           >
             What Builders and Innovators Are Saying
           </motion.h2>
@@ -65,7 +65,7 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-center text-lg text-black/70 font-light leading-normal tracking-normal max-w-3xl mx-auto"
+            className="text-center text-sm sm:text-base md:text-lg lg:text-xl text-black/70 font-light leading-relaxed tracking-normal max-w-4xl mx-auto px-4"
           >
             From developers to protocol teams, Stratifi is reshaping how
             autonomous agents interact onchain. Hear from those already building
@@ -78,11 +78,11 @@ export function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative overflow-hidden"
+          className="relative overflow-hidden mask-fade-x"
         >
-          <div className="flex animate-scroll space-x-6 md:space-x-8">
+          <div className="flex animate-scroll space-x-4 sm:space-x-6 md:space-x-8">
             {/* First set of testimonials */}
-            <div className="flex space-x-6 md:space-x-8 flex-shrink-0">
+            <div className="flex space-x-4 sm:space-x-6 md:space-x-8 flex-shrink-0">
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={`first-${index}`}
@@ -90,18 +90,18 @@ export function Testimonials() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="relative rounded-2xl border border-black/10 bg-white transition-colors duration-300 hover:bg-[#f2f2f2] shadow-sm hover:shadow-lg w-80 md:w-96 flex-shrink-0"
+                  className="relative rounded-xl sm:rounded-2xl border border-black/10 bg-white transition-all duration-300 hover:bg-[#f2f2f2] shadow-sm hover:shadow-lg w-72 sm:w-80 md:w-96 lg:w-[400px] flex-shrink-0 hover:scale-[1.02]"
                 >
-                  <div className="p-6 h-full flex flex-col">
-                    <div className="flex-1 mb-6">
-                      <blockquote className="text-black/80 leading-relaxed text-sm md:text-base italic">
+                  <div className="p-4 sm:p-5 md:p-6 lg:p-7 h-full flex flex-col min-h-[280px] sm:min-h-[300px] md:min-h-[320px]">
+                    <div className="flex-1 mb-4 sm:mb-5 md:mb-6">
+                      <blockquote className="text-black/80 leading-relaxed text-xs sm:text-sm md:text-base lg:text-lg italic font-light">
                         &ldquo;{testimonial.quote}&rdquo;
                       </blockquote>
                     </div>
 
-                    <div className="flex items-center space-x-3">
+                    <div className="flex items-center space-x-3 sm:space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 rounded-full bg-white shadow-sm overflow-hidden">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white shadow-sm overflow-hidden ring-1 ring-black/5">
                           <Image
                             src={testimonial.avatar}
                             alt={`${testimonial.name} avatar`}
@@ -112,10 +112,10 @@ export function Testimonials() {
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="font-medium text-black text-sm leading-tight">
+                        <div className="font-medium text-black text-xs sm:text-sm md:text-base leading-tight truncate">
                           {testimonial.name}
                         </div>
-                        <div className="text-black/60 text-xs leading-tight">
+                        <div className="text-black/60 text-xs sm:text-xs md:text-sm leading-tight mt-0.5 truncate">
                           {testimonial.title}
                         </div>
                       </div>
@@ -126,7 +126,7 @@ export function Testimonials() {
             </div>
 
             {/* Duplicate set for seamless loop */}
-            <div className="flex space-x-6 md:space-x-8 flex-shrink-0">
+            <div className="flex space-x-4 sm:space-x-6 md:space-x-8 flex-shrink-0">
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={`second-${index}`}
@@ -134,18 +134,18 @@ export function Testimonials() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="relative rounded-2xl border border-black/10 bg-white transition-colors duration-300 hover:bg-[#f2f2f2] shadow-sm hover:shadow-lg w-80 md:w-96 flex-shrink-0"
+                  className="relative rounded-xl sm:rounded-2xl border border-black/10 bg-white transition-all duration-300 hover:bg-[#f2f2f2] shadow-sm hover:shadow-lg w-72 sm:w-80 md:w-96 lg:w-[400px] flex-shrink-0 hover:scale-[1.02]"
                 >
-                  <div className="p-6 h-full flex flex-col">
-                    <div className="flex-1 mb-6">
-                      <blockquote className="text-black/80 leading-relaxed text-sm md:text-base italic">
+                  <div className="p-4 sm:p-5 md:p-6 lg:p-7 h-full flex flex-col min-h-[280px] sm:min-h-[300px] md:min-h-[320px]">
+                    <div className="flex-1 mb-4 sm:mb-5 md:mb-6">
+                      <blockquote className="text-black/80 leading-relaxed text-xs sm:text-sm md:text-base lg:text-lg italic font-light">
                         &ldquo;{testimonial.quote}&rdquo;
                       </blockquote>
                     </div>
 
-                    <div className="flex items-center space-x-3">
+                    <div className="flex items-center space-x-3 sm:space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 rounded-full bg-white shadow-sm overflow-hidden">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white shadow-sm overflow-hidden ring-1 ring-black/5">
                           <Image
                             src={testimonial.avatar}
                             alt={`${testimonial.name} avatar`}
@@ -156,10 +156,10 @@ export function Testimonials() {
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="font-medium text-black text-sm leading-tight">
+                        <div className="font-medium text-black text-xs sm:text-sm md:text-base leading-tight truncate">
                           {testimonial.name}
                         </div>
-                        <div className="text-black/60 text-xs leading-tight">
+                        <div className="text-black/60 text-xs sm:text-xs md:text-sm leading-tight mt-0.5 truncate">
                           {testimonial.title}
                         </div>
                       </div>
